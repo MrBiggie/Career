@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5700815E1F6D2B9600FE851F /* WLBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5700815D1F6D2B9600FE851F /* WLBModel.swift */; };
 		570081601F6D2BCD00FE851F /* WLBItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5700815F1F6D2BCD00FE851F /* WLBItemViewController.swift */; };
 		570081621F6D3E5500FE851F /* WLBWheelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570081611F6D3E5500FE851F /* WLBWheelViewController.swift */; };
+		57255E471F6E1578008A5E77 /* WLBItemModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 57255E451F6E1578008A5E77 /* WLBItemModel.xcdatamodeld */; };
 		576722011F615DA100799242 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 576721FF1F615DA100799242 /* AVFoundation.framework */; };
 		576722021F615DA100799242 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 576722001F615DA100799242 /* AVKit.framework */; };
 		576722041F615E4800799242 /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576722031F615E4800799242 /* IntroductionViewController.swift */; };
@@ -57,9 +57,9 @@
 
 /* Begin PBXFileReference section */
 		4810735F83CC31C8C80402F3 /* Pods_28DaysCareerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_28DaysCareerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5700815D1F6D2B9600FE851F /* WLBModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WLBModel.swift; sourceTree = "<group>"; };
 		5700815F1F6D2BCD00FE851F /* WLBItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WLBItemViewController.swift; sourceTree = "<group>"; };
 		570081611F6D3E5500FE851F /* WLBWheelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WLBWheelViewController.swift; sourceTree = "<group>"; };
+		57255E461F6E1578008A5E77 /* WLBItemModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WLBItemModel.xcdatamodel; sourceTree = "<group>"; };
 		576721FF1F615DA100799242 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		576722001F615DA100799242 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		576722031F615E4800799242 /* IntroductionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
@@ -146,8 +146,8 @@
 				57E60B4A1F615FC600544083 /* introduction.mp4 */,
 				578526871F61640900B7B585 /* WLBIntroductionViewController.swift */,
 				5700815F1F6D2BCD00FE851F /* WLBItemViewController.swift */,
+				57255E451F6E1578008A5E77 /* WLBItemModel.xcdatamodeld */,
 				570081611F6D3E5500FE851F /* WLBWheelViewController.swift */,
-				5700815D1F6D2B9600FE851F /* WLBModel.swift */,
 				578526891F61735700B7B585 /* wlbintroduction.m4a */,
 			);
 			path = 28DaysCareer;
@@ -394,7 +394,7 @@
 				578526881F61640900B7B585 /* WLBIntroductionViewController.swift in Sources */,
 				576722041F615E4800799242 /* IntroductionViewController.swift in Sources */,
 				570081621F6D3E5500FE851F /* WLBWheelViewController.swift in Sources */,
-				5700815E1F6D2B9600FE851F /* WLBModel.swift in Sources */,
+				57255E471F6E1578008A5E77 /* WLBItemModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -678,6 +678,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		57255E451F6E1578008A5E77 /* WLBItemModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				57255E461F6E1578008A5E77 /* WLBItemModel.xcdatamodel */,
+			);
+			currentVersion = 57255E461F6E1578008A5E77 /* WLBItemModel.xcdatamodel */;
+			path = WLBItemModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 579578C61F6145230080DAD5 /* Project object */;
 }

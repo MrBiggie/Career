@@ -6,10 +6,8 @@
 //  Copyright © 2017年 zhaoxuelin. All rights reserved.
 //
 
-
 import UIKit
 import TKRadarChart
-//hello nihao
 
 class WLBWheelViewController: UIViewController {
 

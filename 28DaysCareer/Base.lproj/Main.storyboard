@@ -297,6 +297,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="CareerButton:" destination="rEx-3c-T8o" eventType="touchUpInside" id="4bc-Hr-hYK"/>
                                     <segue destination="fiu-ha-hgg" kind="showDetail" identifier="career" id="U8O-c1-D3R"/>
                                 </connections>
                             </button>
@@ -365,6 +366,9 @@
                             <constraint firstAttribute="trailing" secondItem="qq5-nE-z5c" secondAttribute="trailing" id="nsU-r7-8tl"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="slider" destination="0Gn-U6-TE6" id="DYT-qG-Tmc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IIn-GL-8Zz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -476,6 +480,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="FamilyButton:" destination="fiu-ha-hgg" eventType="touchUpInside" id="8Gf-mr-vmx"/>
                                     <segue destination="3AC-mv-WfI" kind="showDetail" identifier="family" id="fJi-6P-B82"/>
                                 </connections>
                             </button>
@@ -544,6 +549,9 @@
                             <constraint firstItem="nLy-AA-13O" firstAttribute="centerX" secondItem="5bN-TA-O4d" secondAttribute="centerX" id="urN-k8-4ql"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="slider" destination="Hde-YZ-biy" id="Xjh-Nh-KKw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nif-1E-T8j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -588,6 +596,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="SpiritualityButton:" destination="3AC-mv-WfI" eventType="touchUpInside" id="Td4-9M-AOr"/>
                                     <segue destination="WsD-7V-kg4" kind="showDetail" identifier="spirituality" id="Ghx-Eu-VVO"/>
                                 </connections>
                             </button>
@@ -656,6 +665,9 @@
                             <constraint firstItem="VBL-Zg-fQ2" firstAttribute="top" secondItem="naU-rd-aZI" secondAttribute="bottom" constant="26" id="u4J-RW-dDk"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="slider" destination="L2k-sv-VZy" id="Ss6-vM-zl5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XrH-pz-sQU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -700,6 +712,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="LearningButton:" destination="WsD-7V-kg4" eventType="touchUpInside" id="oat-w0-uNv"/>
                                     <segue destination="80S-gR-NBv" kind="showDetail" identifier="learning" id="mEb-M1-Hio"/>
                                 </connections>
                             </button>
@@ -768,6 +781,9 @@
                             <constraint firstItem="B3a-bV-TlG" firstAttribute="leading" secondItem="fhV-xT-agV" secondAttribute="leadingMargin" constant="28" id="rQk-Bw-gAs"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="slider" destination="dHu-oN-7ld" id="9cY-ov-UUo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Onb-x1-jZf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -812,6 +828,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="FinanceButton:" destination="80S-gR-NBv" eventType="touchUpInside" id="ACM-Lg-fFE"/>
                                     <segue destination="3cy-eX-ngz" kind="showDetail" identifier="finance" id="4kD-zy-6JK"/>
                                 </connections>
                             </button>
@@ -880,6 +897,9 @@
                             <constraint firstItem="qXB-zn-po9" firstAttribute="leading" secondItem="sLf-JJ-ALo" secondAttribute="leadingMargin" constant="26" id="ytP-CB-SpF"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="slider" destination="Jwp-iK-C8W" id="eFh-No-RZW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b2e-TR-SXf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -924,6 +944,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="FunButton:" destination="3cy-eX-ngz" eventType="touchUpInside" id="9u3-2X-QTj"/>
                                     <segue destination="Iuz-Fe-mzd" kind="showDetail" identifier="fun" id="ATh-ig-zvG"/>
                                 </connections>
                             </button>
@@ -992,6 +1013,9 @@
                             <constraint firstItem="HlV-y9-fY0" firstAttribute="top" secondItem="bUp-fz-6Pv" secondAttribute="bottom" constant="95" id="zTF-uH-vrO"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="slider" destination="khZ-Rf-Odu" id="Ua4-Xx-zDe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gs4-CP-i1w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1036,6 +1060,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="HealthButton:" destination="Iuz-Fe-mzd" eventType="touchUpInside" id="JLL-12-Nt9"/>
                                     <segue destination="kBp-fz-uBf" kind="showDetail" identifier="health" id="9fe-1C-Oz9"/>
                                 </connections>
                             </button>
@@ -1104,6 +1129,9 @@
                             <constraint firstItem="dgO-o8-ojB" firstAttribute="leading" secondItem="3fe-gk-97f" secondAttribute="leadingMargin" constant="24" id="yZW-DR-ATw"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="slider" destination="1JD-JB-yjN" id="FIR-CX-Z4F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hNq-7V-zNV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1148,6 +1176,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="FriendsButton:" destination="kBp-fz-uBf" eventType="touchUpInside" id="bEp-9F-xhM"/>
                                     <segue destination="kCg-17-vaY" kind="showDetail" identifier="friends" id="e2X-mN-zOZ"/>
                                 </connections>
                             </button>
@@ -1216,6 +1245,9 @@
                             <constraint firstItem="wjg-Us-rbc" firstAttribute="top" secondItem="YuC-SL-SOg" secondAttribute="bottom" constant="216" id="zkV-7v-veB"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="slider" destination="Ilq-Be-qxU" id="ggk-au-jEh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ya-Qk-9gt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
