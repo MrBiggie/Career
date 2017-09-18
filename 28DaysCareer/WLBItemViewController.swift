@@ -112,7 +112,7 @@ class WLBItemViewController: UIViewController {
             let results = try context.fetch(request) as! [WLBItem]
             //Update
             if results.count > 0{
-                for result in results as! [WLBItem]{
+                for result in results {
                     if Type == "family"{
                         result.family = sliderValue
                     }

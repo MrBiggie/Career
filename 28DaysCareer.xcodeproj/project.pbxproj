@@ -16,6 +16,7 @@
 		578526881F61640900B7B585 /* WLBIntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578526871F61640900B7B585 /* WLBIntroductionViewController.swift */; };
 		5785268A1F61735700B7B585 /* wlbintroduction.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 578526891F61735700B7B585 /* wlbintroduction.m4a */; };
 		5785268D1F617DA000B7B585 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579578D11F6145230080DAD5 /* AppDelegate.swift */; };
+		5794CEA91F6F5C3600F93B39 /* VMPickPicturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5794CEA81F6F5C3600F93B39 /* VMPickPicturesViewController.swift */; };
 		579578D71F6145230080DAD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 579578D51F6145230080DAD5 /* Main.storyboard */; };
 		579578D91F6145230080DAD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 579578D81F6145230080DAD5 /* Assets.xcassets */; };
 		579578DC1F6145230080DAD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 579578DA1F6145230080DAD5 /* LaunchScreen.storyboard */; };
@@ -66,6 +67,7 @@
 		577C99541F6EB5260096FCFC /* WLBWheelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WLBWheelViewController.swift; sourceTree = "<group>"; };
 		578526871F61640900B7B585 /* WLBIntroductionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WLBIntroductionViewController.swift; sourceTree = "<group>"; };
 		578526891F61735700B7B585 /* wlbintroduction.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = wlbintroduction.m4a; sourceTree = "<group>"; };
+		5794CEA81F6F5C3600F93B39 /* VMPickPicturesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMPickPicturesViewController.swift; sourceTree = "<group>"; };
 		579578CE1F6145230080DAD5 /* 28DaysCareer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 28DaysCareer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		579578D11F6145230080DAD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		579578D61F6145230080DAD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -145,11 +147,12 @@
 				579578DA1F6145230080DAD5 /* LaunchScreen.storyboard */,
 				579578DD1F6145230080DAD5 /* Info.plist */,
 				576722031F615E4800799242 /* IntroductionViewController.swift */,
-				57E60B4A1F615FC600544083 /* introduction.mp4 */,
 				578526871F61640900B7B585 /* WLBIntroductionViewController.swift */,
 				5700815F1F6D2BCD00FE851F /* WLBItemViewController.swift */,
 				57255E451F6E1578008A5E77 /* WLBItemModel.xcdatamodeld */,
 				577C99541F6EB5260096FCFC /* WLBWheelViewController.swift */,
+				5794CEA81F6F5C3600F93B39 /* VMPickPicturesViewController.swift */,
+				57E60B4A1F615FC600544083 /* introduction.mp4 */,
 				578526891F61735700B7B585 /* wlbintroduction.m4a */,
 				57C9322E1F6EB926004243F5 /* TKRadarChart.swift */,
 			);
@@ -393,6 +396,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5785268D1F617DA000B7B585 /* AppDelegate.swift in Sources */,
+				5794CEA91F6F5C3600F93B39 /* VMPickPicturesViewController.swift in Sources */,
 				570081601F6D2BCD00FE851F /* WLBItemViewController.swift in Sources */,
 				578526881F61640900B7B585 /* WLBIntroductionViewController.swift in Sources */,
 				576722041F615E4800799242 /* IntroductionViewController.swift in Sources */,
