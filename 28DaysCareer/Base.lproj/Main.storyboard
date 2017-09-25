@@ -2115,7 +2115,12 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIv-KV-YsC">
                                 <rect key="frame" x="29" y="348" width="316" height="144"/>
-                                <string key="text">Images that make you feel happy• What exactly on the board makes you happy? • Why are you happy?• Does this Happiness help you look at a career path with new eyes?</string>
+                                <string key="text">Images that make you feel happy
+
+• What exactly on the board makes you happy? 
+• Why are you happy?
+• Does this Happiness help you look at a career path with new eyes?
+</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -2134,7 +2139,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                 <state key="normal" title="+"/>
                                 <connections>
-                                    <action selector="HappySelectButton:" destination="Y7u-Sk-oC8" eventType="touchUpInside" id="21o-8w-Bji"/>
                                     <segue destination="70P-qi-WiI" kind="showDetail" identifier="happy" id="95e-sO-gnl"/>
                                 </connections>
                             </button>
@@ -2165,6 +2169,10 @@
                             <constraint firstItem="EIy-Y9-WjD" firstAttribute="centerX" secondItem="UoJ-jQ-nAc" secondAttribute="centerX" id="vmY-iD-R3H"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="PickPicButton" destination="fwQ-gS-sUc" id="Eu6-qA-Nds"/>
+                        <outlet property="SelectImageView" destination="FHr-eT-YJg" id="egY-5u-kj5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JoX-sD-Lbf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2226,13 +2234,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                 <state key="normal" title="+"/>
                                 <connections>
-                                    <action selector="InspireSelectButton:" destination="5kF-jL-NuH" eventType="touchUpInside" id="3Ju-Fu-5Yd"/>
                                     <segue destination="70P-qi-WiI" kind="showDetail" identifier="inspire" id="zmY-Mh-xqe"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u0i-TQ-h4v">
                                 <rect key="frame" x="22" y="347" width="330" height="169"/>
-                                <string key="text">How can I grow my career• What images inspire you? • Why do they inspire you?• How does this inspiration open up new directions in your career?</string>
+                                <string key="text">How can I grow my career
+
+• What images inspire you? 
+• Why do they inspire you?
+• How does this inspiration open up new directions in your career?
+</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -2264,6 +2276,10 @@
                             <constraint firstAttribute="trailingMargin" secondItem="FZw-bi-RDc" secondAttribute="trailing" constant="52" id="zLe-36-PVH"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="PickPicButton" destination="LoG-pf-YPa" id="ZkK-Xx-fFn"/>
+                        <outlet property="SelectImageView" destination="FZw-bi-RDc" id="7QJ-Oh-ip9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="itL-zG-MUQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2307,6 +2323,9 @@
                                 <state key="normal" title="Continue">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="qD4-Hl-4C0" kind="showDetail" id="BXg-Wa-dbH"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Challenge" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sdk-oy-Auc">
                                 <rect key="frame" x="83" y="50" width="208" height="99"/>
@@ -2322,13 +2341,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                 <state key="normal" title="+"/>
                                 <connections>
-                                    <action selector="ChallengeSelectButton:" destination="u0i-VI-1bI" eventType="touchUpInside" id="d7Q-Fe-rEx"/>
                                     <segue destination="70P-qi-WiI" kind="showDetail" identifier="challenge" id="qPn-MT-Ofe"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbA-f5-tdi">
                                 <rect key="frame" x="28" y="322" width="318" height="194"/>
-                                <string key="text">How can I grow my career• Which images challenge you?• Why do they challenge? • Have you always used these challenges to stop your career moving ahead?</string>
+                                <string key="text">How can I grow my career
+
+• Which images challenge you?
+• Why do they challenge? 
+• Have you always used these challenges to stop your career moving ahead?
+</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -2360,6 +2383,10 @@
                             <constraint firstAttribute="trailingMargin" secondItem="2Jn-Yx-soD" secondAttribute="trailing" constant="107" id="xOZ-jG-FCq"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="PickPicButton" destination="QZU-u1-jcr" id="Ylo-SG-JeV"/>
+                        <outlet property="SelectImageView" destination="oGI-BB-FCf" id="UJz-tx-yTN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1GB-IF-ygC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2467,9 +2494,90 @@
             </objects>
             <point key="canvasLocation" x="3465" y="1194"/>
         </scene>
+        <!--Item View Controller-->
+        <scene sceneID="6K3-RW-Rsi">
+            <objects>
+                <viewController id="qD4-Hl-4C0" customClass="WLBItemViewController" customModule="_8DaysCareer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lod-JN-mG5"/>
+                        <viewControllerLayoutGuide type="bottom" id="K6c-yU-sLG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gof-CS-jjq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WqZ-gg-u9B">
+                                <rect key="frame" x="0.0" y="507" width="375" height="160"/>
+                                <color key="backgroundColor" red="0.92941176469999998" green="0.32156862749999998" blue="0.0" alpha="0.87018407529999997" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="eGE-Lb-q4i"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="69s-UP-WuN">
+                                <rect key="frame" x="0.0" y="20" width="375" height="159"/>
+                                <color key="backgroundColor" red="0.92941176469999998" green="0.32156862749999998" blue="0.0" alpha="0.87018407529999997" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="159" id="bRg-V9-4qQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ud9-SW-pPb">
+                                <rect key="frame" x="123" y="533" width="129" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Of0-jT-vod" kind="showDetail" id="gvV-LT-4mk"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step3 Finished" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sG-DC-tze">
+                                <rect key="frame" x="94" y="46" width="187" height="107"/>
+                                <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Well done! You have finished the Step 3" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Fp-z9-V6p">
+                                <rect key="frame" x="46" y="264" width="283" height="139"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ud9-SW-pPb" firstAttribute="leading" secondItem="gof-CS-jjq" secondAttribute="leadingMargin" constant="107" id="0gL-40-sJd"/>
+                            <constraint firstItem="K6c-yU-sLG" firstAttribute="top" secondItem="ud9-SW-pPb" secondAttribute="bottom" constant="95" id="1vR-JB-DcD"/>
+                            <constraint firstItem="7sG-DC-tze" firstAttribute="top" secondItem="lod-JN-mG5" secondAttribute="bottom" constant="26" id="2BN-AI-4rc"/>
+                            <constraint firstItem="8Fp-z9-V6p" firstAttribute="centerY" secondItem="gof-CS-jjq" secondAttribute="centerY" id="320-As-JUu"/>
+                            <constraint firstItem="WqZ-gg-u9B" firstAttribute="leading" secondItem="69s-UP-WuN" secondAttribute="leading" id="AuD-Ua-UAx"/>
+                            <constraint firstItem="69s-UP-WuN" firstAttribute="top" secondItem="lod-JN-mG5" secondAttribute="bottom" id="F2U-rq-NsY"/>
+                            <constraint firstItem="8Fp-z9-V6p" firstAttribute="centerX" secondItem="ud9-SW-pPb" secondAttribute="centerX" id="HGb-e9-dAc"/>
+                            <constraint firstItem="WqZ-gg-u9B" firstAttribute="trailing" secondItem="69s-UP-WuN" secondAttribute="trailing" id="IIc-ih-Wlz"/>
+                            <constraint firstItem="8Fp-z9-V6p" firstAttribute="top" secondItem="69s-UP-WuN" secondAttribute="bottom" constant="85" id="Vze-W2-CK6"/>
+                            <constraint firstAttribute="trailing" secondItem="69s-UP-WuN" secondAttribute="trailing" id="cVG-EE-3na"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ud9-SW-pPb" secondAttribute="trailing" constant="107" id="cxB-kW-cXU"/>
+                            <constraint firstItem="8Fp-z9-V6p" firstAttribute="leading" secondItem="gof-CS-jjq" secondAttribute="leadingMargin" constant="30" id="dwZ-T1-bzT"/>
+                            <constraint firstItem="WqZ-gg-u9B" firstAttribute="bottom" secondItem="K6c-yU-sLG" secondAttribute="top" id="gYq-R3-OYo"/>
+                            <constraint firstItem="7sG-DC-tze" firstAttribute="leading" secondItem="gof-CS-jjq" secondAttribute="leadingMargin" constant="78" id="hii-tx-k5Q"/>
+                            <constraint firstItem="7sG-DC-tze" firstAttribute="centerY" secondItem="69s-UP-WuN" secondAttribute="centerY" id="oXX-3e-XQR"/>
+                            <constraint firstItem="69s-UP-WuN" firstAttribute="leading" secondItem="gof-CS-jjq" secondAttribute="leading" id="rTF-ED-l9y"/>
+                            <constraint firstItem="7sG-DC-tze" firstAttribute="centerX" secondItem="69s-UP-WuN" secondAttribute="centerX" id="taE-8I-7JJ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Db-Zf-PSo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4956" y="394"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="25j-nT-0FI"/>
-        <segue reference="95e-sO-gnl"/>
+        <segue reference="gvV-LT-4mk"/>
+        <segue reference="qPn-MT-Ofe"/>
     </inferredMetricsTieBreakers>
 </document>
