@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class VMPickPicturesViewController: UIViewController, UIImagePickerControllerDelegate,
 UINavigationControllerDelegate {
@@ -22,42 +23,42 @@ UINavigationControllerDelegate {
         super.viewDidLoad()
     }
     
-    //选取相册
+    //pick pictures from Album
     @IBAction func fromAlbum(_ sender: AnyObject) {
-        //判断设置是否支持图片库
+        //judge whether support ImagePicker from Album
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
-            //初始化图片控制器
+            //initiate the ImagePicker
             let picker = UIImagePickerController()
-            //设置代理
+            //Set the delegate
             picker.delegate = self
-            //指定图片控制器类型
+            //Choose the type of imagePickerController
             picker.sourceType = UIImagePickerControllerSourceType.photoLibrary
-            //设置是否允许编辑
+            //Setting editSwitch
             picker.allowsEditing = editSwitch.isOn
-            //弹出控制器，显示界面
+            //present
             self.present(picker, animated: true, completion: {
                 () -> Void in
             })
         }else{
-            print("读取相册错误")
+            print("Read album error")
         }
         
     }
     
     
-    //选择图片成功后代理
+    //Choose picture
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [String : Any]) {
-        //查看info对象
+        //Detail of pictures
         print(info)
         
-        //显示的图片
+        //Image
         let image:UIImage!
         if editSwitch.isOn {
-            //获取编辑后的图片
+            //Get Image after editing
             image = info[UIImagePickerControllerEditedImage] as! UIImage
         }else{
-            //获取选择的原图
+            //Get the original picture
             image = info[UIImagePickerControllerOriginalImage] as! UIImage
         }
         
@@ -77,15 +78,102 @@ UINavigationControllerDelegate {
             }
         }
         
-        
-        //图片控制器退出
+        //Exit the ImagePicker
         picker.dismiss(animated: true, completion: {
             () -> Void in
         })
         
     }
     
+    //Remove picture
+    @IBAction func RemovePicture(_ sender: UIButton) {
+        if self.imageFour.image == nil{
+            if self.imageThree.image == nil{
+                if self.imageTwo.image == nil{
+                    if self.imageOne.image == nil{
+                        
+                    }else{
+                        imageOne.image = nil
+                    }
+                }else{
+                    imageTwo.image = nil
+                }
+            }else{
+                imageThree.image = nil
+            }
+        }else{
+            imageFour.image = nil
+        }
+    }
     
+    //Save pictures
+    @IBAction func SavePictures(_ sender: UIButton) {
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        let context = appDelegate.persistentContainer.viewContext
+        
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Image")
+        request.returnsObjectsAsFaults = false
+        
+        
+        do
+        {
+            //Delete previous data
+            let results = try context.fetch(request)
+            
+            if results.count > 0{
+                for result in results as! [NSManagedObject]{
+                    context.delete(result)
+                }
+            }
+            
+            //Insert image and save
+            let image = NSEntityDescription.insertNewObject(forEntityName: "Image", into: context)
+            
+            if self.imageOne.image != nil{
+                if let imageData1 = UIImageJPEGRepresentation(self.imageOne.image!, 1){
+                    image.setValue(imageData1, forKey: "image1")
+                    print("image1 set")
+                }
+            }
+            
+            
+            if self.imageTwo.image != nil{
+                if let imageData2 = UIImageJPEGRepresentation(self.imageTwo.image!, 1){
+                    image.setValue(imageData2, forKey: "image2")
+                    print("image2 set")
+                }
+            }
+            
+            if self.imageThree.image != nil{
+                if let imageData3 = UIImageJPEGRepresentation(self.imageThree.image!, 1){
+                    image.setValue(imageData3, forKey: "image3")
+                    print("image3 set")
+                }
+            }
+            
+            if self.imageFour.image != nil{
+                if let imageData4 = UIImageJPEGRepresentation(self.imageFour.image!, 1){
+                    image.setValue(imageData4, forKey: "image4")
+                    print("image4 set")
+                }
+            }
+            //Save imageData
+            try context.save()
+            
+            if results.count > 0{
+                for result in results as! [NSManagedObject]{
+                    print(result.description)
+                }
+            }
+        }
+        catch
+        {
+            //PROCESS ERROR
+        }
+        
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		570081601F6D2BCD00FE851F /* WLBItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5700815F1F6D2BCD00FE851F /* WLBItemViewController.swift */; };
 		57255E471F6E1578008A5E77 /* WLBItemModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 57255E451F6E1578008A5E77 /* WLBItemModel.xcdatamodeld */; };
+		5734C2761F78AD240016BB26 /* UVMSelectPictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5734C2751F78AD240016BB26 /* UVMSelectPictureViewController.swift */; };
+		5734C2781F78B3A90016BB26 /* UVMPicturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5734C2771F78B3A90016BB26 /* UVMPicturesViewController.swift */; };
 		576722011F615DA100799242 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 576721FF1F615DA100799242 /* AVFoundation.framework */; };
 		576722021F615DA100799242 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 576722001F615DA100799242 /* AVKit.framework */; };
 		576722041F615E4800799242 /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576722031F615E4800799242 /* IntroductionViewController.swift */; };
@@ -61,6 +63,8 @@
 		4810735F83CC31C8C80402F3 /* Pods_28DaysCareerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_28DaysCareerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5700815F1F6D2BCD00FE851F /* WLBItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WLBItemViewController.swift; sourceTree = "<group>"; };
 		57255E461F6E1578008A5E77 /* WLBItemModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WLBItemModel.xcdatamodel; sourceTree = "<group>"; };
+		5734C2751F78AD240016BB26 /* UVMSelectPictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UVMSelectPictureViewController.swift; sourceTree = "<group>"; };
+		5734C2771F78B3A90016BB26 /* UVMPicturesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UVMPicturesViewController.swift; sourceTree = "<group>"; };
 		576721FF1F615DA100799242 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		576722001F615DA100799242 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		576722031F615E4800799242 /* IntroductionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +156,8 @@
 				57255E451F6E1578008A5E77 /* WLBItemModel.xcdatamodeld */,
 				577C99541F6EB5260096FCFC /* WLBWheelViewController.swift */,
 				5794CEA81F6F5C3600F93B39 /* VMPickPicturesViewController.swift */,
+				5734C2751F78AD240016BB26 /* UVMSelectPictureViewController.swift */,
+				5734C2771F78B3A90016BB26 /* UVMPicturesViewController.swift */,
 				57E60B4A1F615FC600544083 /* introduction.mp4 */,
 				578526891F61735700B7B585 /* wlbintroduction.m4a */,
 				57C9322E1F6EB926004243F5 /* TKRadarChart.swift */,
@@ -399,9 +405,11 @@
 				5794CEA91F6F5C3600F93B39 /* VMPickPicturesViewController.swift in Sources */,
 				570081601F6D2BCD00FE851F /* WLBItemViewController.swift in Sources */,
 				578526881F61640900B7B585 /* WLBIntroductionViewController.swift in Sources */,
+				5734C2781F78B3A90016BB26 /* UVMPicturesViewController.swift in Sources */,
 				576722041F615E4800799242 /* IntroductionViewController.swift in Sources */,
 				577C99551F6EB5260096FCFC /* WLBWheelViewController.swift in Sources */,
 				57C9322F1F6EB926004243F5 /* TKRadarChart.swift in Sources */,
+				5734C2761F78AD240016BB26 /* UVMSelectPictureViewController.swift in Sources */,
 				57255E471F6E1578008A5E77 /* WLBItemModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
