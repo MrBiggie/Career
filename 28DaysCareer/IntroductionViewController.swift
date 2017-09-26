@@ -17,29 +17,23 @@ class IntroductionViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-
-    //hi
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     var player:AVPlayer?
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidLoad()
        
-      //定义一个视频文件路径
+        // Video Path
         let filePath = Bundle.main.path(forResource: "introduction", ofType: "mp4")
         let videoURL = URL(fileURLWithPath: filePath!)
-        //定义一个视频播放器，通过本地文件路径初始化
+        // Video player
         player = AVPlayer(url: videoURL)
-        //设置大小和位置（全屏）
+        // Size an location
         let playerLayer = AVPlayerLayer(player: player)
         playerLayer.frame = self.view.bounds
-        //添加到界面上
+        // Add to view
         self.view.layer.addSublayer(playerLayer)
-        //开始播放
+        // Play
         player?.play()
     }
     
@@ -47,5 +41,8 @@ class IntroductionViewController: UIViewController {
         player?.pause()
     }
     
-    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
 }

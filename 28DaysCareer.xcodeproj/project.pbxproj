@@ -26,6 +26,7 @@
 		579578F21F6145230080DAD5 /* _8DaysCareerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579578F11F6145230080DAD5 /* _8DaysCareerUITests.swift */; };
 		57C9322F1F6EB926004243F5 /* TKRadarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C9322E1F6EB926004243F5 /* TKRadarChart.swift */; };
 		57D54AED1F792FB800591CAB /* APProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D54AEC1F792FB800591CAB /* APProjectViewController.swift */; };
+		57DA03241F79CFA800DA87A8 /* APSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DA03231F79CFA800DA87A8 /* APSummaryViewController.swift */; };
 		57E60B4B1F615FC600544083 /* introduction.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 57E60B4A1F615FC600544083 /* introduction.mp4 */; };
 		AB52F341E07104328B1A047F /* Pods_28DaysCareer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5941EB0B70D0F8CDBE0C310 /* Pods_28DaysCareer.framework */; };
 /* End PBXBuildFile section */
@@ -87,6 +88,7 @@
 		579578F31F6145230080DAD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57C9322E1F6EB926004243F5 /* TKRadarChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TKRadarChart.swift; sourceTree = "<group>"; };
 		57D54AEC1F792FB800591CAB /* APProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APProjectViewController.swift; sourceTree = "<group>"; };
+		57DA03231F79CFA800DA87A8 /* APSummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APSummaryViewController.swift; sourceTree = "<group>"; };
 		57E60B4A1F615FC600544083 /* introduction.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = introduction.mp4; sourceTree = "<group>"; };
 		C5941EB0B70D0F8CDBE0C310 /* Pods_28DaysCareer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_28DaysCareer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5B5DF898B669FB78DFA0B3D /* Pods-28DaysCareer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-28DaysCareer.release.xcconfig"; path = "Pods/Target Support Files/Pods-28DaysCareer/Pods-28DaysCareer.release.xcconfig"; sourceTree = "<group>"; };
@@ -155,12 +157,13 @@
 				576722031F615E4800799242 /* IntroductionViewController.swift */,
 				578526871F61640900B7B585 /* WLBIntroductionViewController.swift */,
 				5700815F1F6D2BCD00FE851F /* WLBItemViewController.swift */,
-				57255E451F6E1578008A5E77 /* WLBItemModel.xcdatamodeld */,
 				577C99541F6EB5260096FCFC /* WLBWheelViewController.swift */,
 				5794CEA81F6F5C3600F93B39 /* VMPickPicturesViewController.swift */,
 				5734C2751F78AD240016BB26 /* UVMSelectPictureViewController.swift */,
 				5734C2771F78B3A90016BB26 /* UVMPicturesViewController.swift */,
 				57D54AEC1F792FB800591CAB /* APProjectViewController.swift */,
+				57DA03231F79CFA800DA87A8 /* APSummaryViewController.swift */,
+				57255E451F6E1578008A5E77 /* WLBItemModel.xcdatamodeld */,
 				57E60B4A1F615FC600544083 /* introduction.mp4 */,
 				578526891F61735700B7B585 /* wlbintroduction.m4a */,
 				57C9322E1F6EB926004243F5 /* TKRadarChart.swift */,
@@ -414,6 +417,7 @@
 				577C99551F6EB5260096FCFC /* WLBWheelViewController.swift in Sources */,
 				57C9322F1F6EB926004243F5 /* TKRadarChart.swift in Sources */,
 				5734C2761F78AD240016BB26 /* UVMSelectPictureViewController.swift in Sources */,
+				57DA03241F79CFA800DA87A8 /* APSummaryViewController.swift in Sources */,
 				57255E471F6E1578008A5E77 /* WLBItemModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
