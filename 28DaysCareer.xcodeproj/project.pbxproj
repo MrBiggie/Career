@@ -24,6 +24,7 @@
 		579578DC1F6145230080DAD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 579578DA1F6145230080DAD5 /* LaunchScreen.storyboard */; };
 		579578E71F6145230080DAD5 /* _8DaysCareerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579578E61F6145230080DAD5 /* _8DaysCareerTests.swift */; };
 		579578F21F6145230080DAD5 /* _8DaysCareerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579578F11F6145230080DAD5 /* _8DaysCareerUITests.swift */; };
+		57B82CB31F7A29C5000156CE /* Four_Seasons_Autumn_Movt_1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 57B82CB21F7A29C5000156CE /* Four_Seasons_Autumn_Movt_1.mp3 */; };
 		57C9322F1F6EB926004243F5 /* TKRadarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C9322E1F6EB926004243F5 /* TKRadarChart.swift */; };
 		57D54AED1F792FB800591CAB /* APProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D54AEC1F792FB800591CAB /* APProjectViewController.swift */; };
 		57DA03241F79CFA800DA87A8 /* APSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DA03231F79CFA800DA87A8 /* APSummaryViewController.swift */; };
@@ -86,6 +87,7 @@
 		579578ED1F6145230080DAD5 /* 28DaysCareerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 28DaysCareerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		579578F11F6145230080DAD5 /* _8DaysCareerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _8DaysCareerUITests.swift; sourceTree = "<group>"; };
 		579578F31F6145230080DAD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57B82CB21F7A29C5000156CE /* Four_Seasons_Autumn_Movt_1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Four_Seasons_Autumn_Movt_1.mp3; sourceTree = "<group>"; };
 		57C9322E1F6EB926004243F5 /* TKRadarChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TKRadarChart.swift; sourceTree = "<group>"; };
 		57D54AEC1F792FB800591CAB /* APProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APProjectViewController.swift; sourceTree = "<group>"; };
 		57DA03231F79CFA800DA87A8 /* APSummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APSummaryViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				57255E451F6E1578008A5E77 /* WLBItemModel.xcdatamodeld */,
 				57E60B4A1F615FC600544083 /* introduction.mp4 */,
 				578526891F61735700B7B585 /* wlbintroduction.m4a */,
+				57B82CB21F7A29C5000156CE /* Four_Seasons_Autumn_Movt_1.mp3 */,
 				57C9322E1F6EB926004243F5 /* TKRadarChart.swift */,
 			);
 			path = 28DaysCareer;
@@ -329,6 +332,7 @@
 				579578D91F6145230080DAD5 /* Assets.xcassets in Resources */,
 				57E60B4B1F615FC600544083 /* introduction.mp4 in Resources */,
 				579578D71F6145230080DAD5 /* Main.storyboard in Resources */,
+				57B82CB31F7A29C5000156CE /* Four_Seasons_Autumn_Movt_1.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -278,6 +278,9 @@
                             <constraint firstItem="7EI-0u-VHA" firstAttribute="centerY" secondItem="M56-Dm-YIQ" secondAttribute="centerY" id="zSA-qy-tk0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="IntroductionLabel" destination="7EI-0u-VHA" id="WtQ-2k-gTe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hGE-cx-ATp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1456,6 +1459,9 @@
                             <constraint firstItem="feE-9c-HQI" firstAttribute="top" secondItem="2kH-Ga-qUE" secondAttribute="bottom" constant="18" id="ycu-fo-EUg"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="IntroductionLabel" destination="1cY-GU-RHH" id="K8w-l0-KIh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VUa-4h-4sa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1556,15 +1562,18 @@
                             <constraint firstItem="OoM-Ad-hsu" firstAttribute="leading" secondItem="759-HW-ppS" secondAttribute="leading" id="ziP-gd-IUy"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="IntroductionLabel" destination="4kg-bW-QhZ" id="std-KN-bIp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hb8-OP-ALu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2633" y="-260"/>
         </scene>
-        <!--Introduction View Controller-->
+        <!--View Controller-->
         <scene sceneID="DlM-1W-wSb">
             <objects>
-                <viewController id="QSi-SF-Ewt" customClass="WLBIntroductionViewController" customModule="_8DaysCareer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="QSi-SF-Ewt" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BoL-xB-dmH"/>
                         <viewControllerLayoutGuide type="bottom" id="zOQ-fx-2i0"/>
@@ -1971,6 +1980,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="U5m-TP-FOk" secondAttribute="trailing" constant="82" id="zJd-av-pmn"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="IntroductionLabel" destination="6YT-cu-Nqd" id="rts-G1-EN4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dKa-Bp-d4c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2072,6 +2084,9 @@
                             <constraint firstItem="o5g-6j-jcg" firstAttribute="centerX" secondItem="b6H-1b-7lh" secondAttribute="centerX" id="yq2-yR-73T"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="IntroductionLabel" destination="o5g-6j-jcg" id="iwl-9L-7wy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0gc-TD-Rp9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3346,13 +3361,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Project3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANs-sI-NV2">
-                                <rect key="frame" x="141.5" y="424" width="93" height="33"/>
+                                <rect key="frame" x="140.5" y="424" width="93" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Project2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Is1-nO-ipS">
-                                <rect key="frame" x="142.5" y="279" width="92" height="33"/>
+                                <rect key="frame" x="141.5" y="279" width="92" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -3562,7 +3577,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="cAp-ok-Itk"/>
+        <segue reference="25j-nT-0FI"/>
         <segue reference="95e-sO-gnl"/>
     </inferredMetricsTieBreakers>
 </document>
