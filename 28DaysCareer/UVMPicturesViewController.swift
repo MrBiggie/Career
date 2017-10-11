@@ -6,6 +6,11 @@
 //  Copyright © 2017年 zhaoxuelin. All rights reserved.
 //
 
+protocol PictureViewControllerDelegate{
+    // protocl function
+    func passImageNumber(picture:String, btnvisiable: Bool)
+}
+
 import UIKit
 import CoreData
 
@@ -16,7 +21,10 @@ class UVMPicturesViewController: UIViewController {
     @IBOutlet weak var imageThree: UIImageView!
     @IBOutlet weak var imageFour: UIImageView!
     
+    var delegate : PictureViewControllerDelegate?
     var receivedIdentifier: String = "SegueIdentifier"
+    
+    var spvc: UVMSelectPictureViewController = UVMSelectPictureViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +42,7 @@ class UVMPicturesViewController: UIViewController {
             let results = try context.fetch(request)
             
             if results.count > 0{
+                print(results.count)
                 for result in results as! [NSManagedObject]{
                     if let imageData1 = result.value(forKey: "image1") as? Data{
                         let image1 = UIImage(data: imageData1)
@@ -85,37 +94,49 @@ class UVMPicturesViewController: UIViewController {
     //tapHandlerOne
     func tapHandlerOne(){
         print("tapHandlerOne")
-        let VC = self.storyboard?.instantiateViewController(withIdentifier: receivedIdentifier) as! UVMSelectPictureViewController
-        VC.receivedImage = "ImageOne"
-        VC.buttonVisiable = false
-        self.present(VC, animated: true, completion: nil)
+//        let VC = self.storyboard?.instantiateViewController(withIdentifier: receivedIdentifier) as! UVMSelectPictureViewController
+//        VC.receivedImage = "ImageOne"
+//        VC.buttonVisiable = false
+////        self.present(VC, animated: true, completion: nil)
+//        self.navigationController?.popToViewController(VC, animated: true)
+        self.delegate?.passImageNumber(picture: "ImageOne", btnvisiable: false)
+        self.navigationController?.popViewController(animated: true)
     }
     
     //tapHandlerTwo
     func tapHandlerTwo(){
         print("tapHandlerTwo")
-        let VC = self.storyboard?.instantiateViewController(withIdentifier: receivedIdentifier) as! UVMSelectPictureViewController
-        VC.receivedImage = "ImageTwo"
-        VC.buttonVisiable = false
-        self.present(VC, animated: true, completion: nil)
+//        let VC = self.storyboard?.instantiateViewController(withIdentifier: receivedIdentifier) as! UVMSelectPictureViewController
+//        VC.receivedImage = "ImageTwo"
+//        VC.buttonVisiable = false
+////        self.present(VC, animated: true, completion: nil)
+//        self.navigationController?.popToViewController(VC, animated: true)
+        self.delegate?.passImageNumber(picture: "ImageTwo", btnvisiable: false)
+        self.navigationController?.popViewController(animated: true)
     }
     
     //tapHandlerThree
     func tapHandlerThree(){
         print("tapHandlerThree")
-        let VC = self.storyboard?.instantiateViewController(withIdentifier: receivedIdentifier) as! UVMSelectPictureViewController
-        VC.receivedImage = "ImageThree"
-        VC.buttonVisiable = false
-        self.present(VC, animated: true, completion: nil)
+//        let VC = self.storyboard?.instantiateViewController(withIdentifier: receivedIdentifier) as! UVMSelectPictureViewController
+//        VC.receivedImage = "ImageThree"
+//        VC.buttonVisiable = false
+//        //self.present(VC, animated: true, completion: nil)
+//        self.navigationController?.popToViewController(VC, animated: true)
+        self.delegate?.passImageNumber(picture: "ImageThree", btnvisiable: false)
+        self.navigationController?.popViewController(animated: true)
     }
     
     //tapHandlerFour
     func tapHandlerFour(){
         print("tapHandlerFour")
-        let VC = self.storyboard?.instantiateViewController(withIdentifier: receivedIdentifier) as! UVMSelectPictureViewController
-        VC.receivedImage = "ImageFour"
-        VC.buttonVisiable = false
-        self.present(VC, animated: true, completion: nil)
+//        let VC = self.storyboard?.instantiateViewController(withIdentifier: receivedIdentifier) as! UVMSelectPictureViewController
+//        VC.receivedImage = "ImageFour"
+//        VC.buttonVisiable = false
+//        //self.present(VC, animated: true, completion: nil)
+//        self.navigationController?.popToViewController(VC, animated: true)
+        self.delegate?.passImageNumber(picture: "ImageFour", btnvisiable: false)
+        self.navigationController?.popViewController(animated: true)
     }
     
     

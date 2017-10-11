@@ -22,15 +22,22 @@ class WLBIntroductionViewController: UIViewController {
         // Default URL
         var URL: URL = Bundle.main.url(forResource: "Four_Seasons_Autumn_Movt_1", withExtension: "mp3")!
         
-        // Choose Audio URL accordiong to the title
+         //Choose Audio URL accordiong to the title
         if(IntroductionLabel.text == "Work-life Balance"){
             URL = Bundle.main.url(forResource: "wlbintroduction", withExtension: "m4a")!
         }
-        
+        if(IntroductionLabel.text == "Vision Map"){
+            URL = Bundle.main.url(forResource: "vmintroduction", withExtension: "m4a")!
+        }
+        if(IntroductionLabel.text == "Unpacking Vision Map"){
+            URL = Bundle.main.url(forResource: "uvmintroduction", withExtension: "m4a")!
+        }
+        if(IntroductionLabel.text == "Action Plan"){
+            URL = Bundle.main.url(forResource: "apintroduction", withExtension: "m4a")!
+        }
         if(IntroductionLabel.text == "Relaxation"){
             URL = Bundle.main.url(forResource: "Four_Seasons_Autumn_Movt_1", withExtension: "mp3")!
         }
-        
         do {
             player = try AVAudioPlayer(contentsOf: URL)
             player?.prepareToPlay()

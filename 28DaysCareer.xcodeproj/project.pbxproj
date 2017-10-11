@@ -8,15 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		570081601F6D2BCD00FE851F /* WLBItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5700815F1F6D2BCD00FE851F /* WLBItemViewController.swift */; };
+		571F5AFC1F8A1BD7008B0FA2 /* FinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571F5AFB1F8A1BD7008B0FA2 /* FinishViewController.swift */; };
 		57255E471F6E1578008A5E77 /* WLBItemModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 57255E451F6E1578008A5E77 /* WLBItemModel.xcdatamodeld */; };
+		5733529F1F8277B300F23E26 /* vmintroduction.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 5733529D1F8277B200F23E26 /* vmintroduction.m4a */; };
+		573352A01F8277B300F23E26 /* wlbintroduction.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 5733529E1F8277B300F23E26 /* wlbintroduction.m4a */; };
 		5734C2761F78AD240016BB26 /* UVMSelectPictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5734C2751F78AD240016BB26 /* UVMSelectPictureViewController.swift */; };
 		5734C2781F78B3A90016BB26 /* UVMPicturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5734C2771F78B3A90016BB26 /* UVMPicturesViewController.swift */; };
 		576722011F615DA100799242 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 576721FF1F615DA100799242 /* AVFoundation.framework */; };
 		576722021F615DA100799242 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 576722001F615DA100799242 /* AVKit.framework */; };
 		576722041F615E4800799242 /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576722031F615E4800799242 /* IntroductionViewController.swift */; };
+		576B16171F8E5180001F56EF /* uvmintroduction.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 576B16151F8E517F001F56EF /* uvmintroduction.m4a */; };
+		576B16181F8E5180001F56EF /* apintroduction.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 576B16161F8E517F001F56EF /* apintroduction.m4a */; };
 		577C99551F6EB5260096FCFC /* WLBWheelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577C99541F6EB5260096FCFC /* WLBWheelViewController.swift */; };
 		578526881F61640900B7B585 /* WLBIntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578526871F61640900B7B585 /* WLBIntroductionViewController.swift */; };
-		5785268A1F61735700B7B585 /* wlbintroduction.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 578526891F61735700B7B585 /* wlbintroduction.m4a */; };
 		5785268D1F617DA000B7B585 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579578D11F6145230080DAD5 /* AppDelegate.swift */; };
 		5794CEA91F6F5C3600F93B39 /* VMPickPicturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5794CEA81F6F5C3600F93B39 /* VMPickPicturesViewController.swift */; };
 		579578D71F6145230080DAD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 579578D51F6145230080DAD5 /* Main.storyboard */; };
@@ -65,15 +69,19 @@
 /* Begin PBXFileReference section */
 		4810735F83CC31C8C80402F3 /* Pods_28DaysCareerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_28DaysCareerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5700815F1F6D2BCD00FE851F /* WLBItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WLBItemViewController.swift; sourceTree = "<group>"; };
+		571F5AFB1F8A1BD7008B0FA2 /* FinishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishViewController.swift; sourceTree = "<group>"; };
 		57255E461F6E1578008A5E77 /* WLBItemModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WLBItemModel.xcdatamodel; sourceTree = "<group>"; };
+		5733529D1F8277B200F23E26 /* vmintroduction.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = vmintroduction.m4a; sourceTree = "<group>"; };
+		5733529E1F8277B300F23E26 /* wlbintroduction.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = wlbintroduction.m4a; sourceTree = "<group>"; };
 		5734C2751F78AD240016BB26 /* UVMSelectPictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UVMSelectPictureViewController.swift; sourceTree = "<group>"; };
 		5734C2771F78B3A90016BB26 /* UVMPicturesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UVMPicturesViewController.swift; sourceTree = "<group>"; };
 		576721FF1F615DA100799242 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		576722001F615DA100799242 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		576722031F615E4800799242 /* IntroductionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
+		576B16151F8E517F001F56EF /* uvmintroduction.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = uvmintroduction.m4a; sourceTree = "<group>"; };
+		576B16161F8E517F001F56EF /* apintroduction.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = apintroduction.m4a; sourceTree = "<group>"; };
 		577C99541F6EB5260096FCFC /* WLBWheelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WLBWheelViewController.swift; sourceTree = "<group>"; };
 		578526871F61640900B7B585 /* WLBIntroductionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WLBIntroductionViewController.swift; sourceTree = "<group>"; };
-		578526891F61735700B7B585 /* wlbintroduction.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = wlbintroduction.m4a; sourceTree = "<group>"; };
 		5794CEA81F6F5C3600F93B39 /* VMPickPicturesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMPickPicturesViewController.swift; sourceTree = "<group>"; };
 		579578CE1F6145230080DAD5 /* 28DaysCareer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 28DaysCareer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		579578D11F6145230080DAD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -165,9 +173,13 @@
 				5734C2771F78B3A90016BB26 /* UVMPicturesViewController.swift */,
 				57D54AEC1F792FB800591CAB /* APProjectViewController.swift */,
 				57DA03231F79CFA800DA87A8 /* APSummaryViewController.swift */,
+				571F5AFB1F8A1BD7008B0FA2 /* FinishViewController.swift */,
 				57255E451F6E1578008A5E77 /* WLBItemModel.xcdatamodeld */,
 				57E60B4A1F615FC600544083 /* introduction.mp4 */,
-				578526891F61735700B7B585 /* wlbintroduction.m4a */,
+				5733529D1F8277B200F23E26 /* vmintroduction.m4a */,
+				5733529E1F8277B300F23E26 /* wlbintroduction.m4a */,
+				576B16151F8E517F001F56EF /* uvmintroduction.m4a */,
+				576B16161F8E517F001F56EF /* apintroduction.m4a */,
 				57B82CB21F7A29C5000156CE /* Four_Seasons_Autumn_Movt_1.mp3 */,
 				57C9322E1F6EB926004243F5 /* TKRadarChart.swift */,
 			);
@@ -285,7 +297,7 @@
 				TargetAttributes = {
 					579578CD1F6145230080DAD5 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 8M6GM94BF8;
+						DevelopmentTeam = ARTM93YH2M;
 						ProvisioningStyle = Automatic;
 					};
 					579578E11F6145230080DAD5 = {
@@ -327,10 +339,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5785268A1F61735700B7B585 /* wlbintroduction.m4a in Resources */,
 				579578DC1F6145230080DAD5 /* LaunchScreen.storyboard in Resources */,
+				5733529F1F8277B300F23E26 /* vmintroduction.m4a in Resources */,
+				573352A01F8277B300F23E26 /* wlbintroduction.m4a in Resources */,
 				579578D91F6145230080DAD5 /* Assets.xcassets in Resources */,
+				576B16181F8E5180001F56EF /* apintroduction.m4a in Resources */,
 				57E60B4B1F615FC600544083 /* introduction.mp4 in Resources */,
+				576B16171F8E5180001F56EF /* uvmintroduction.m4a in Resources */,
 				579578D71F6145230080DAD5 /* Main.storyboard in Resources */,
 				57B82CB31F7A29C5000156CE /* Four_Seasons_Autumn_Movt_1.mp3 in Resources */,
 			);
@@ -414,6 +429,7 @@
 				5785268D1F617DA000B7B585 /* AppDelegate.swift in Sources */,
 				5794CEA91F6F5C3600F93B39 /* VMPickPicturesViewController.swift in Sources */,
 				570081601F6D2BCD00FE851F /* WLBItemViewController.swift in Sources */,
+				571F5AFC1F8A1BD7008B0FA2 /* FinishViewController.swift in Sources */,
 				578526881F61640900B7B585 /* WLBIntroductionViewController.swift in Sources */,
 				57D54AED1F792FB800591CAB /* APProjectViewController.swift in Sources */,
 				5734C2781F78B3A90016BB26 /* UVMPicturesViewController.swift in Sources */,
@@ -577,13 +593,13 @@
 			baseConfigurationReference = FF82AD25DC92C29FFCB6E60A /* Pods-28DaysCareer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8M6GM94BF8;
+				DEVELOPMENT_TEAM = ARTM93YH2M;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = 28DaysCareer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MACH_O_TYPE = mh_execute;
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.unimelb.xuelinzhao.28dayscareer.-8DaysCareer";
+				PRODUCT_BUNDLE_IDENTIFIER = com.unimelb.xuelinzhao.28dayscareer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				SYSTEM_FRAMEWORK_SEARCH_PATHS = "";
@@ -595,13 +611,13 @@
 			baseConfigurationReference = D5B5DF898B669FB78DFA0B3D /* Pods-28DaysCareer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8M6GM94BF8;
+				DEVELOPMENT_TEAM = ARTM93YH2M;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = 28DaysCareer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MACH_O_TYPE = mh_execute;
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.unimelb.xuelinzhao.28dayscareer.-8DaysCareer";
+				PRODUCT_BUNDLE_IDENTIFIER = com.unimelb.xuelinzhao.28dayscareer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				SYSTEM_FRAMEWORK_SEARCH_PATHS = "";
