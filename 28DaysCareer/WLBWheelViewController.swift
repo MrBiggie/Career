@@ -15,8 +15,9 @@ class WLBWheelViewController: UIViewController, TKRadarChartDataSource, TKRadarC
         super.viewDidLoad()
         
         let w = view.bounds.width
+    
         let chart = TKRadarChart(frame: CGRect(x: 0, y: 0, width: w, height: w))
-        chart.configuration.radius = w/3
+        chart.configuration.radius = w/3.5
         chart.dataSource = self
         chart.delegate = self
         chart.center = view.center
