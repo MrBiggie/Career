@@ -29,7 +29,7 @@ class WLBIntroductionViewController: UIViewController {
         if(IntroductionLabel.text == "Vision Map"){
             URL = Bundle.main.url(forResource: "vmintroduction", withExtension: "m4a")!
         }
-        if(IntroductionLabel.text == "Unpacking Vision Map"){
+        if(IntroductionLabel.text == "Unpack Vision Map"){
             URL = Bundle.main.url(forResource: "uvmintroduction", withExtension: "m4a")!
         }
         if(IntroductionLabel.text == "Action Plan"){

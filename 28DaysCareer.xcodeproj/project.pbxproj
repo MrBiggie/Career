@@ -161,8 +161,8 @@
 			children = (
 				579578D11F6145230080DAD5 /* AppDelegate.swift */,
 				579578D51F6145230080DAD5 /* Main.storyboard */,
-				579578D81F6145230080DAD5 /* Assets.xcassets */,
 				579578DA1F6145230080DAD5 /* LaunchScreen.storyboard */,
+				579578D81F6145230080DAD5 /* Assets.xcassets */,
 				579578DD1F6145230080DAD5 /* Info.plist */,
 				576722031F615E4800799242 /* IntroductionViewController.swift */,
 				578526871F61640900B7B585 /* WLBIntroductionViewController.swift */,

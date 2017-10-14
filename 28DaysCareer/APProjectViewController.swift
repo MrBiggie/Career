@@ -14,11 +14,14 @@ class APProjectViewController: UIViewController {
     
     @IBOutlet weak var ProjectGoal: UITextField!
     
-    @IBOutlet weak var APOne: UITextField!
+  
+    @IBOutlet weak var APOne: UITextView!
     
-    @IBOutlet weak var APTwo: UITextField!
+    @IBOutlet weak var APTwo: UITextView!
     
-    @IBOutlet weak var APThree: UITextField!
+    @IBOutlet weak var APThree: UITextView!
+    
+    
     
     @IBOutlet weak var Mastermind: UITextView!
     

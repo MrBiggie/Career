@@ -169,7 +169,31 @@ class WLBWheelViewController: UIViewController, TKRadarChartDataSource, TKRadarC
         }
     }
     
-    func colorOfTitleForRadarChart(_ radarChart: TKRadarChart) -> UIColor {
+    func colorOfTitleForRadarChart(_ radarChart: TKRadarChart, row: Int) -> UIColor {
+        if(row == 0){
+            return UIColor.yellow
+        }
+        if(row == 1){
+            return UIColor.cyan
+        }
+        if(row == 2){
+            return UIColor.green
+        }
+        if(row == 3){
+            return UIColor.purple
+        }
+        if(row == 4){
+            return UIColor.orange
+        }
+        if(row == 5){
+            return UIColor.red
+        }
+        if(row == 6){
+            return UIColor.brown
+        }
+        if(row == 7){
+            return UIColor.blue
+        }
         return UIColor.black
     }
     

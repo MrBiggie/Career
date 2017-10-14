@@ -21,7 +21,7 @@ protocol TKRadarChartDataSource: class {
 /// You can custom chart by `TKRadarChartDelegate`
 protocol TKRadarChartDelegate: class {
     
-    func colorOfTitleForRadarChart(_ radarChart: TKRadarChart) -> UIColor
+    func colorOfTitleForRadarChart(_ radarChart: TKRadarChart, row: Int) -> UIColor
     func colorOfLineForRadarChart(_ radarChart: TKRadarChart) -> UIColor
     func colorOfFillStepForRadarChart(_ radarChart: TKRadarChart, step: Int) -> UIColor
    
@@ -39,7 +39,7 @@ extension TKRadarChartDelegateDefault {
     func fontOfTitleForRadarChart(_ radarChart: TKRadarChart) -> UIFont {
         return UIFont.systemFont(ofSize: 11)
     }
-    func colorOfTitleForRadarChart(_ radarChart: TKRadarChart) -> UIColor {
+    func colorOfTitleForRadarChart(_ radarChart: TKRadarChart, row: Int) -> UIColor {
         return UIColor.darkGray
     }
     func colorOfLineForRadarChart(_ radarChart: TKRadarChart) -> UIColor {
@@ -72,15 +72,15 @@ struct TKRadarChartConfig {
     }
     
     
-    var radius: CGFloat    // 半径
-    var minValue: CGFloat  // 最小值
-    var maxValue: CGFloat  // 最大值
+    var radius: CGFloat    // radius
+    var minValue: CGFloat  // minValue
+    var maxValue: CGFloat  // maxValue
     
-    var showPoint: Bool  // 显示圆点
-    var showBorder: Bool // 显示边界
-    var fillArea: Bool   // 填充
-    var clockwise: Bool  // 顺时针
-    var autoCenterPoint: Bool // 自动设置中心点位置
+    var showPoint: Bool  // showPoint
+    var showBorder: Bool // showBorder
+    var fillArea: Bool   // fillArea
+    var clockwise: Bool  // clockwise
+    var autoCenterPoint: Bool // autoCenterPoint
     
 }
 
@@ -157,10 +157,11 @@ class TKRadarChart: UIView, TKRadarChartDelegateDefault {
         
         let lineColor = delegate.colorOfLineForRadarChart(self)
         
-        /// Create  titles
-        let titleColor = delegate.colorOfTitleForRadarChart(self)
+        // Create  titles
+        
         for index in 0..<numOfRow {
             let i = CGFloat(index)
+            let titleColor = delegate.colorOfTitleForRadarChart(self, row: index)
             let title = dataSource.titleOfRowForRadarChart(self, row: index)
             let pointOnEdge = CGPoint(x: centerPoint.x - radius * sin(i * perAngle),
                                       y: centerPoint.y - radius * cos(i * perAngle))
@@ -178,7 +179,7 @@ class TKRadarChart: UIView, TKRadarChartDelegateDefault {
                               NSParagraphStyleAttributeName: paragraphStyle,
                               NSForegroundColorAttributeName: titleColor]
             
-            /// Fix title offset
+            // Fix title offset
             if index == 0 ||  (numOfRow%2 == 0 && index == numOfRow/2){
                 legendCenter.x = centerPoint.x
                 legendCenter.y = centerPoint.y + (radius + padding + height / 2.0) * CGFloat(index == 0 ? -1 : 1)
@@ -188,7 +189,7 @@ class TKRadarChart: UIView, TKRadarChartDelegateDefault {
         }
         
         
-        /// Draw the background rectangle
+        // Draw the background rectangle
         context.saveGState()
         lineColor.setStroke()
         for stepTemp in 1...numOfSetp {
@@ -225,7 +226,7 @@ class TKRadarChart: UIView, TKRadarChartDelegateDefault {
         context.restoreGState()
         
         
-        /// Draw the background line
+        // Draw the background line
         lineColor.setStroke()
         for index in 0..<numOfRow {
             let i = CGFloat(index)
@@ -239,7 +240,7 @@ class TKRadarChart: UIView, TKRadarChartDelegateDefault {
         
         
         
-        /// Draw section
+        // Draw section
         if numOfRow > 0 {
             for section in 0..<numOfSection {
                 
@@ -288,6 +289,30 @@ class TKRadarChart: UIView, TKRadarChartDelegateDefault {
                         let xVal = centerPoint.x - (value - minValue) / (maxValue - minValue) * radius * sin(CGFloat(i) * perAngle)
                         let yVal = centerPoint.y - (value - minValue) / (maxValue - minValue) * radius * cos(CGFloat(i) * perAngle)
                         borderColor.setFill()
+                        if(i == 0){
+                            UIColor.yellow.setFill()
+                        }
+                        if(i == 1){
+                            UIColor.cyan.setFill()
+                        }
+                        if(i == 2){
+                            UIColor.green.setFill()
+                        }
+                        if(i == 3){
+                            UIColor.purple.setFill()
+                        }
+                        if(i == 4){
+                            UIColor.orange.setFill()
+                        }
+                        if(i == 5){
+                            UIColor.red.setFill()
+                        }
+                        if(i == 6){
+                            UIColor.brown.setFill()
+                        }
+                        if(i == 7){
+                            UIColor.blue.setFill()
+                        }
                         context.fillEllipse(in: CGRect(x: xVal-3, y: yVal-3, width: 6, height: 6))
                     }
                 }

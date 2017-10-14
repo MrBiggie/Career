@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,11 +22,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Creating-Encores_Cover_HR-325x500" translatesAutoresizingMaskIntoConstraints="NO" id="QMJ-Sj-v54">
-                                <rect key="frame" x="36" y="44" width="303" height="453"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Creating-Encores_Cover_HR-325x500" translatesAutoresizingMaskIntoConstraints="NO" id="QMJ-Sj-v54">
+                                <rect key="frame" x="37.5" y="44" width="300" height="467"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="28 Day Career Challenge" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jxo-jb-6CH">
-                                <rect key="frame" x="16" y="525" width="343" height="67"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28 Day Career Challenge" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jxo-jb-6CH">
+                                <rect key="frame" x="19.5" y="519" width="337.5" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -33,10 +34,13 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="jxo-jb-6CH" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="CLm-Pf-p8f"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="jxo-jb-6CH" secondAttribute="bottom" constant="75" id="abJ-JO-IXl"/>
-                            <constraint firstItem="QMJ-Sj-v54" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="24" id="dAM-pu-8QC"/>
-                            <constraint firstItem="QMJ-Sj-v54" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="spa-YN-6si"/>
+                            <constraint firstItem="QMJ-Sj-v54" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="7H4-bd-0uX"/>
+                            <constraint firstItem="QMJ-Sj-v54" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.8" id="QWC-hU-NWD"/>
+                            <constraint firstItem="jxo-jb-6CH" firstAttribute="top" secondItem="QMJ-Sj-v54" secondAttribute="bottom" constant="8" id="Ud5-tY-gqB"/>
+                            <constraint firstItem="jxo-jb-6CH" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.9" id="aAQ-MK-Fdg"/>
+                            <constraint firstItem="jxo-jb-6CH" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="c4y-fc-Jhi"/>
+                            <constraint firstItem="QMJ-Sj-v54" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="0.7" id="lH7-uj-0wI"/>
+                            <constraint firstItem="QMJ-Sj-v54" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="24" id="rgb-BQ-vfq"/>
                         </constraints>
                     </view>
                 </viewController>
