@@ -11,7 +11,7 @@ import CoreData
 
 class UVMSelectPictureViewController: UIViewController, PictureViewControllerDelegate {
 
-    var receivedImage: String = "ImageZero"
+    var receivedImage: String = "image0"
     var buttonVisiable: Bool =  true
     
     @IBOutlet weak var PickPicButton: UIButton!
@@ -20,27 +20,18 @@ class UVMSelectPictureViewController: UIViewController, PictureViewControllerDel
         {
             let secondVC: UVMPicturesViewController =  self.storyboard?.instantiateViewController(withIdentifier: "selectpicture") as! UVMPicturesViewController
                 secondVC.delegate = self
-//                secondVC.receivedIdentifier = "Happy"
-//                secondVC.spvc = self
-                //self.present(secondVC, animated: true, completion: nil)
             self.navigationController?.pushViewController(secondVC, animated: true)
     }
     
     @IBAction func PickPictureInspire(_ sender: UIButton) {
         let secondVC: UVMPicturesViewController =  self.storyboard?.instantiateViewController(withIdentifier: "selectpicture") as! UVMPicturesViewController
         secondVC.delegate = self
-//        secondVC.receivedIdentifier = "Inspire"
-//        secondVC.spvc = self
-//        self.present(secondVC, animated: true, completion: nil)
         self.navigationController?.pushViewController(secondVC, animated: true)
     }
     
     @IBAction func PickPictureChallenge(_ sender: UIButton) {
        let secondVC: UVMPicturesViewController =  self.storyboard?.instantiateViewController(withIdentifier: "selectpicture") as! UVMPicturesViewController
         secondVC.delegate = self
-        //secondVC.receivedIdentifier = "Challenge"
-        //secondVC.spvc = self
-        //self.present(secondVC, animated: true, completion: nil)
         self.navigationController?.pushViewController(secondVC, animated: true)
     }
 
@@ -63,6 +54,7 @@ class UVMSelectPictureViewController: UIViewController, PictureViewControllerDel
         
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Image")
         request.returnsObjectsAsFaults = false
+        if (receivedImage != "image0"){
         do
         {
             //Read data
@@ -71,34 +63,41 @@ class UVMSelectPictureViewController: UIViewController, PictureViewControllerDel
             if results.count > 0{
                 for result in results as! [NSManagedObject]{
                     
-                    if(receivedImage == "ImageOne"){
-                        if let imageData1 = result.value(forKey: "image1") as? Data{
-                            let image1 = UIImage(data: imageData1)
-                            SelectImageView.image = image1
-                        }
+                    if let imageData = result.value(forKey: receivedImage) as? Data{
+                        SelectImageView.image = UIImage(data: imageData)
                     }
                     
-                    if(receivedImage == "ImageTwo"){
-                        if let imageData2 = result.value(forKey: "image2") as? Data{
-                            let image2 = UIImage(data: imageData2)
-                            SelectImageView.image = image2
-                            
-                        }
-                    }
+//                    if(receivedImage == "ImageOne"){
+//                        if let imageData1 = result.value(forKey: "image1") as? Data{
+//                            let image1 = UIImage(data: imageData1)
+//                            SelectImageView.image = image1
+//                        }
+//                    }
+//
+//                    if(receivedImage == "ImageTwo"){
+//                        if let imageData2 = result.value(forKey: "image2") as? Data{
+//                            let image2 = UIImage(data: imageData2)
+//                            SelectImageView.image = image2
+//
+//                        }
+//                    }
+//
+//                    if(receivedImage == "ImageThree"){
+//                        if let imageData3 = result.value(forKey: "image3") as? Data{
+//                            let image3 = UIImage(data: imageData3)
+//                            SelectImageView.image = image3
+//                        }
+//                    }
+//
+//                    if(receivedImage == "ImageFour"){
+//                        if let imageData4 = result.value(forKey: "image4") as? Data{
+//                            let image4 = UIImage(data: imageData4)
+//                            SelectImageView.image = image4
+//                        }
+//                    }
                     
-                    if(receivedImage == "ImageThree"){
-                        if let imageData3 = result.value(forKey: "image3") as? Data{
-                            let image3 = UIImage(data: imageData3)
-                            SelectImageView.image = image3
-                        }
-                    }
                     
-                    if(receivedImage == "ImageFour"){
-                        if let imageData4 = result.value(forKey: "image4") as? Data{
-                            let image4 = UIImage(data: imageData4)
-                            SelectImageView.image = image4
-                        }
-                    }
+                    
                 }
             }
         }
@@ -106,9 +105,8 @@ class UVMSelectPictureViewController: UIViewController, PictureViewControllerDel
         {
             //PROCESS ERROR
         }
-        
+        }
     }
-    
     
     
     func passImageNumber(picture: String, btnvisiable: Bool) {
