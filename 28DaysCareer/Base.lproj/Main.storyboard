@@ -52,24 +52,58 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Introduction" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xkM-lG-Bhz">
-                                <rect key="frame" x="52" y="71" width="217" height="40"/>
+                                <rect key="frame" x="52.5" y="71.5" width="216.5" height="39.5"/>
                                 <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bal-vW-ryr">
+                                <rect key="frame" x="32.5" y="222.5" width="256" height="62.5"/>
+                                <string key="text">Welcome to
+28-Day Career Challenge</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="nL9-DB-4zg">
+                                <rect key="frame" x="64" y="341.5" width="192" height="92"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1e-A8-afa">
+                                        <rect key="frame" x="81" y="0.0" width="30" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="⏯"/>
+                                        <connections>
+                                            <action selector="AudioPlayButton:" destination="qJS-6N-Bcc" eventType="touchUpInside" id="vKO-UB-GR4"/>
+                                            <action selector="PlayVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hfN-pG-TQP"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video Introduction" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KsW-37-1SO">
+                                        <rect key="frame" x="9" y="56" width="174.5" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Bal-vW-ryr" firstAttribute="top" secondItem="bpO-aq-Ity" secondAttribute="bottom" multiplier="1.2" constant="28" id="6qO-L2-sgR" userLabel="Welcome to 28 Day Career Challenge.top = Label.bottom + 28"/>
                             <constraint firstItem="qoj-Or-lYB" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="8AD-aS-qY9"/>
                             <constraint firstItem="8ev-pW-SYN" firstAttribute="centerX" secondItem="qoj-Or-lYB" secondAttribute="centerX" id="8k0-El-66Y"/>
+                            <constraint firstItem="nL9-DB-4zg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Vu-lt-zEC"/>
                             <constraint firstItem="xkM-lG-Bhz" firstAttribute="centerY" secondItem="bpO-aq-Ity" secondAttribute="centerY" id="Cgq-Mc-v17"/>
                             <constraint firstItem="qoj-Or-lYB" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.2" id="Kyl-Lw-7gy"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qoj-Or-lYB" secondAttribute="bottom" id="O2D-OK-pYQ"/>
                             <constraint firstItem="bpO-aq-Ity" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Oe7-1P-vjx"/>
                             <constraint firstItem="xkM-lG-Bhz" firstAttribute="centerX" secondItem="bpO-aq-Ity" secondAttribute="centerX" id="QY4-uh-U91"/>
+                            <constraint firstItem="nL9-DB-4zg" firstAttribute="top" secondItem="Bal-vW-ryr" secondAttribute="bottom" constant="56.5" id="TqI-9k-vTH"/>
                             <constraint firstItem="bpO-aq-Ity" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Y0b-BT-G1U"/>
+                            <constraint firstItem="Bal-vW-ryr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aXS-tx-0uo"/>
                             <constraint firstItem="8ev-pW-SYN" firstAttribute="centerY" secondItem="qoj-Or-lYB" secondAttribute="centerY" id="bKA-dy-oSw"/>
+                            <constraint firstItem="Bal-vW-ryr" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="gCp-Up-qjr"/>
                             <constraint firstItem="qoj-Or-lYB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jpg-Ii-Lzr"/>
+                            <constraint firstItem="nL9-DB-4zg" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.6" id="lnt-6b-G14"/>
                             <constraint firstItem="bpO-aq-Ity" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tb1-bF-qcN"/>
                             <constraint firstItem="bpO-aq-Ity" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.25" id="yN7-gB-piR"/>
                         </constraints>
@@ -77,7 +111,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-767" y="36"/>
+            <point key="canvasLocation" x="-768.75" y="35.91549295774648"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KVP-Q8-g9g">
@@ -431,12 +465,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work-Life Balance Wheel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" highlighted="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yhp-gm-18z">
-                                <rect key="frame" x="0.5" y="77" width="320" height="79"/>
-                                <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IkX-IH-aUg">
                                 <rect key="frame" x="101.5" y="487" width="118" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -447,6 +475,12 @@
                                     <segue destination="fN6-j5-piS" kind="push" id="hdd-Vb-4bi"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work-Life Balance Wheel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" highlighted="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yhp-gm-18z">
+                                <rect key="frame" x="0.0" y="77" width="320" height="79"/>
+                                <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -459,10 +493,10 @@
                             <constraint firstItem="mGo-gb-DzU" firstAttribute="centerX" secondItem="b6a-J1-RNj" secondAttribute="centerX" id="ZQ6-y5-8kL"/>
                             <constraint firstItem="56w-bR-lmn" firstAttribute="width" secondItem="b6a-J1-RNj" secondAttribute="width" id="ZVw-xY-k7F"/>
                             <constraint firstItem="56w-bR-lmn" firstAttribute="height" secondItem="b6a-J1-RNj" secondAttribute="height" multiplier="0.2" id="ZeJ-QN-pTl"/>
+                            <constraint firstItem="56w-bR-lmn" firstAttribute="top" secondItem="ukK-dx-i5g" secondAttribute="bottom" constant="-4.5" id="Zxk-hP-6LG"/>
                             <constraint firstItem="yhp-gm-18z" firstAttribute="centerX" secondItem="56w-bR-lmn" secondAttribute="centerX" id="arB-2V-YMY"/>
                             <constraint firstItem="56w-bR-lmn" firstAttribute="centerX" secondItem="b6a-J1-RNj" secondAttribute="centerX" id="ePa-A7-cWc"/>
                             <constraint firstItem="IkX-IH-aUg" firstAttribute="centerY" secondItem="mGo-gb-DzU" secondAttribute="centerY" id="gX6-vn-zVh"/>
-                            <constraint firstItem="yhp-gm-18z" firstAttribute="top" secondItem="ukK-dx-i5g" secondAttribute="bottom" constant="13" id="hcS-aq-Lg6"/>
                             <constraint firstItem="yhp-gm-18z" firstAttribute="centerY" secondItem="56w-bR-lmn" secondAttribute="centerY" id="yON-eJ-4NT"/>
                         </constraints>
                     </view>
@@ -546,10 +580,10 @@
             </objects>
             <point key="canvasLocation" x="9527" y="-942"/>
         </scene>
-        <!--View Controller-->
+        <!--Reflection View Controller-->
         <scene sceneID="DlM-1W-wSb">
             <objects>
-                <viewController id="QSi-SF-Ewt" sceneMemberID="viewController">
+                <viewController id="QSi-SF-Ewt" customClass="VMReflectionViewController" customModule="_8DaysCareer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BoL-xB-dmH"/>
                         <viewControllerLayoutGuide type="bottom" id="zOQ-fx-2i0"/>
@@ -595,10 +629,12 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Write down your reflection" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UIQ-aw-DJb">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UIQ-aw-DJb">
                                 <rect key="frame" x="32" y="198" width="256" height="199"/>
                                 <color key="backgroundColor" red="0.47450980539999998" green="0.8392156959" blue="0.97647058959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <string key="text">Write down your reflection
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -626,7 +662,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ly9-3X-d1O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3463.125" y="-260.91549295774649"/>
+            <point key="canvasLocation" x="3407" y="-262"/>
         </scene>
         <!--Pick Pictures View Controller-->
         <scene sceneID="Yio-Sc-fd4">
@@ -675,21 +711,12 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJ9-eO-V1U">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJ9-eO-V1U">
                                 <rect key="frame" x="16" y="477" width="30" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <state key="normal" title="-"/>
                                 <connections>
                                     <action selector="RemovePicture:" destination="IRS-fv-ZIl" eventType="touchUpInside" id="rg1-hT-sKy"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ds-XB-Vkr">
-                                <rect key="frame" x="278" y="481" width="22" height="22"/>
-                                <state key="normal">
-                                    <color key="titleColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="fromAlbum:" destination="IRS-fv-ZIl" eventType="touchUpInside" id="eoJ-sO-2qT"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mcb-Q0-7cR">
@@ -753,15 +780,24 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ET-Nf-IdI">
+                                <rect key="frame" x="274" y="477" width="30" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="fromAlbum:" destination="IRS-fv-ZIl" eventType="touchUpInside" id="6JN-Ao-BmG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="mcb-Q0-7cR" firstAttribute="height" secondItem="pHT-3V-KHx" secondAttribute="height" multiplier="0.6" id="2Wz-h9-rW3"/>
+                            <constraint firstItem="1ET-Nf-IdI" firstAttribute="top" secondItem="1RI-0V-WJ4" secondAttribute="bottom" constant="7.5" id="4fz-oS-8X3"/>
                             <constraint firstItem="Zua-mO-nm2" firstAttribute="width" secondItem="pHT-3V-KHx" secondAttribute="width" id="Bcz-Ax-hzb"/>
                             <constraint firstItem="EJ9-eO-V1U" firstAttribute="leading" secondItem="pHT-3V-KHx" secondAttribute="leading" constant="16" id="Cf2-iM-oky"/>
+                            <constraint firstAttribute="trailing" secondItem="1ET-Nf-IdI" secondAttribute="trailing" constant="16" id="EAX-VC-UtS"/>
                             <constraint firstItem="J60-Po-t87" firstAttribute="centerX" secondItem="pHT-3V-KHx" secondAttribute="centerX" id="IKp-al-b62"/>
                             <constraint firstItem="J60-Po-t87" firstAttribute="width" secondItem="pHT-3V-KHx" secondAttribute="width" id="Jzh-qI-Zp1"/>
-                            <constraint firstAttribute="trailing" secondItem="6ds-XB-Vkr" secondAttribute="trailing" constant="20" id="Mt7-VO-ThQ"/>
                             <constraint firstItem="LGq-AF-b1G" firstAttribute="centerX" secondItem="Zua-mO-nm2" secondAttribute="centerX" id="N5d-zZ-eGi"/>
                             <constraint firstItem="J60-Po-t87" firstAttribute="top" secondItem="9mJ-vt-84g" secondAttribute="bottom" id="NYg-t6-mP6"/>
                             <constraint firstItem="LGq-AF-b1G" firstAttribute="centerY" secondItem="Zua-mO-nm2" secondAttribute="centerY" id="Suw-or-6IZ"/>
@@ -772,7 +808,6 @@
                             <constraint firstItem="80p-TM-RiW" firstAttribute="centerY" secondItem="J60-Po-t87" secondAttribute="centerY" id="pYS-hQ-Sem"/>
                             <constraint firstItem="Zua-mO-nm2" firstAttribute="centerX" secondItem="pHT-3V-KHx" secondAttribute="centerX" id="qWs-LT-T60"/>
                             <constraint firstItem="mcb-Q0-7cR" firstAttribute="centerX" secondItem="pHT-3V-KHx" secondAttribute="centerX" id="qd4-FV-4mf"/>
-                            <constraint firstItem="6ds-XB-Vkr" firstAttribute="top" secondItem="mcb-Q0-7cR" secondAttribute="bottom" constant="11.5" id="s3S-tY-bea"/>
                             <constraint firstItem="EJ9-eO-V1U" firstAttribute="top" secondItem="mcb-Q0-7cR" secondAttribute="bottom" constant="7.5" id="tww-2j-JQc"/>
                             <constraint firstItem="80p-TM-RiW" firstAttribute="centerX" secondItem="J60-Po-t87" secondAttribute="centerX" id="uTx-sk-2cb"/>
                             <constraint firstItem="J60-Po-t87" firstAttribute="height" secondItem="pHT-3V-KHx" secondAttribute="height" multiplier="0.1" id="upi-lg-RNd"/>
@@ -2518,7 +2553,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations you have completed the 28 Day Career Challenge!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vbA-5C-EBI">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations you have completed the 28-Day Career Challenge!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vbA-5C-EBI">
                                 <rect key="frame" x="24" y="170" width="272" height="79.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
@@ -2542,11 +2577,11 @@ Mobile: 61411685335</string>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4ja-TM-PAZ">
-                                <rect key="frame" x="16" y="428" width="288" height="62.5"/>
+                                <rect key="frame" x="16" y="418" width="288" height="91"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">For a complimentary 10 - minute Power coaching session click on this link.
 https://calendly.com/creatingencores/free-10-minute-power-coaching-session-with-sally-arnol</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
@@ -2559,7 +2594,7 @@ https://calendly.com/creatingencores/free-10-minute-power-coaching-session-with-
                             <constraint firstItem="uFZ-pP-tfl" firstAttribute="centerY" secondItem="ibF-kT-nLd" secondAttribute="centerY" id="4nu-Pe-yDM"/>
                             <constraint firstItem="vbA-5C-EBI" firstAttribute="width" secondItem="LmA-Fo-fyh" secondAttribute="width" multiplier="0.85" id="Af9-ZX-5ZA"/>
                             <constraint firstItem="Mh2-p7-yJe" firstAttribute="centerX" secondItem="LmA-Fo-fyh" secondAttribute="centerX" id="Ahq-12-ogR"/>
-                            <constraint firstItem="4ja-TM-PAZ" firstAttribute="height" secondItem="LmA-Fo-fyh" secondAttribute="height" multiplier="0.11" id="D20-MY-Yo6"/>
+                            <constraint firstItem="4ja-TM-PAZ" firstAttribute="height" secondItem="LmA-Fo-fyh" secondAttribute="height" multiplier="0.16" id="D20-MY-Yo6"/>
                             <constraint firstItem="Mh2-p7-yJe" firstAttribute="top" secondItem="3u3-Nd-azR" secondAttribute="bottom" constant="8" id="FKn-o0-iWd"/>
                             <constraint firstItem="4ja-TM-PAZ" firstAttribute="width" secondItem="LmA-Fo-fyh" secondAttribute="width" multiplier="0.9" id="IHF-st-ZtL"/>
                             <constraint firstItem="3u3-Nd-azR" firstAttribute="width" secondItem="LmA-Fo-fyh" secondAttribute="width" multiplier="0.9" id="In1-dW-mhD"/>
@@ -2572,18 +2607,21 @@ https://calendly.com/creatingencores/free-10-minute-power-coaching-session-with-
                             <constraint firstItem="ZT2-l0-Z5i" firstAttribute="width" secondItem="LmA-Fo-fyh" secondAttribute="width" id="bBa-nh-sba"/>
                             <constraint firstItem="ibF-kT-nLd" firstAttribute="top" secondItem="b3h-7R-5s9" secondAttribute="bottom" id="cae-MB-7dm"/>
                             <constraint firstItem="3u3-Nd-azR" firstAttribute="top" secondItem="vbA-5C-EBI" secondAttribute="bottom" constant="9.5" id="eBB-Fz-kZB"/>
-                            <constraint firstItem="4ja-TM-PAZ" firstAttribute="top" secondItem="Mh2-p7-yJe" secondAttribute="bottom" constant="8" id="evG-rK-1ij"/>
                             <constraint firstItem="uFZ-pP-tfl" firstAttribute="centerX" secondItem="ibF-kT-nLd" secondAttribute="centerX" id="f6Q-mo-nEL"/>
                             <constraint firstItem="ibF-kT-nLd" firstAttribute="height" secondItem="LmA-Fo-fyh" secondAttribute="height" multiplier="0.15" id="fuf-O7-6FI"/>
                             <constraint firstItem="3u3-Nd-azR" firstAttribute="centerX" secondItem="LmA-Fo-fyh" secondAttribute="centerX" id="gmj-rd-h8X"/>
                             <constraint firstItem="vbA-5C-EBI" firstAttribute="top" secondItem="ibF-kT-nLd" secondAttribute="bottom" constant="21" id="hUF-Mm-lsm"/>
                             <constraint firstItem="3u3-Nd-azR" firstAttribute="height" secondItem="LmA-Fo-fyh" secondAttribute="height" multiplier="0.12" id="o8n-eu-qS0"/>
                             <constraint firstItem="4ja-TM-PAZ" firstAttribute="centerX" secondItem="LmA-Fo-fyh" secondAttribute="centerX" id="t55-IB-Cd7"/>
+                            <constraint firstItem="4ja-TM-PAZ" firstAttribute="top" secondItem="Mh2-p7-yJe" secondAttribute="bottom" constant="-2" id="x0j-Vw-GbX"/>
                             <constraint firstItem="Mh2-p7-yJe" firstAttribute="height" secondItem="LmA-Fo-fyh" secondAttribute="height" multiplier="0.15" id="yJJ-ro-0da"/>
                             <constraint firstItem="ibF-kT-nLd" firstAttribute="centerX" secondItem="LmA-Fo-fyh" secondAttribute="centerX" id="zQn-io-HhP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="PrP-n3-frS"/>
+                    <connections>
+                        <outlet property="ContactDetailText" destination="Mh2-p7-yJe" id="fM2-vU-jvg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UyQ-Qk-k1d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3108,7 +3146,7 @@ https://calendly.com/creatingencores/free-10-minute-power-coaching-session-with-
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="PRACTICE YOUR PITCH FOR RECRUITMENT COMPANIES AND NETWORKING GROUPS." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sFq-DY-akV">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="PRACTICE YOUR PITCH FOR RECRUITMENT COMPANIES AND NETWORKING GROUPS." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sFq-DY-akV">
                                 <rect key="frame" x="19" y="446.5" width="282" height="56.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -3192,19 +3230,19 @@ https://calendly.com/creatingencores/free-10-minute-power-coaching-session-with-
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="vhR-vr-Okw">
                                 <rect key="frame" x="48" y="237" width="256" height="170.5"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="Start contacting recruitment agencies to help me find a job." textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o0a-WY-jYR">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" text="Start contacting recruitment agencies to help me find a job." textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o0a-WY-jYR">
                                         <rect key="frame" x="0.0" y="0.0" width="256" height="57"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="Outline careers that excite me." textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9jt-WR-Nmn">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" text="Outline careers that excite me." textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9jt-WR-Nmn">
                                         <rect key="frame" x="0.0" y="61" width="256" height="48.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="Discover my transferable leverageable skills. " textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1DK-yo-xAd">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" text="Discover my transferable leverageable skills. " textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1DK-yo-xAd">
                                         <rect key="frame" x="0.0" y="113.5" width="256" height="57"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -3406,7 +3444,7 @@ https://calendly.com/creatingencores/free-10-minute-power-coaching-session-with-
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nra-8Y-Uin">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nra-8Y-Uin">
                                 <rect key="frame" x="274" y="202" width="30" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Ca"/>
@@ -3420,16 +3458,16 @@ https://calendly.com/creatingencores/free-10-minute-power-coaching-session-with-
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="  /  /    " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8zi-oj-XkW">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="  /  /    " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8zi-oj-XkW">
                                 <rect key="frame" x="204" y="202" width="56" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="kEu-8g-0MI">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="kEu-8g-0MI">
                                 <rect key="frame" x="22" y="246" width="17" height="138"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mqb-Ki-Tkx">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mqb-Ki-Tkx">
                                         <rect key="frame" x="0.0" y="0.0" width="17" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="17" id="j9A-oT-YMF"/>
@@ -3438,13 +3476,13 @@ https://calendly.com/creatingencores/free-10-minute-power-coaching-session-with-
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kqv-DL-2fg">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kqv-DL-2fg">
                                         <rect key="frame" x="0.0" y="57" width="17" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tme-Jk-cEb">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tme-Jk-cEb">
                                         <rect key="frame" x="0.0" y="114" width="17" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
@@ -3473,40 +3511,40 @@ https://calendly.com/creatingencores/free-10-minute-power-coaching-session-with-
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="33x-tP-cGG">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="33x-tP-cGG">
                                 <rect key="frame" x="24" y="166" width="272" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Action Plans" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gjd-ZS-2eC">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Action Plans" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gjd-ZS-2eC">
                                 <rect key="frame" x="16" y="204" width="108" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Mastermind" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ore-hL-63m">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mastermind" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ore-hL-63m">
                                 <rect key="frame" x="16" y="417.5" width="103.5" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="6gf-3E-pF9">
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="6gf-3E-pF9">
                                 <rect key="frame" x="48" y="237" width="256" height="170.5"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Hi-qP-lyB">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Hi-qP-lyB">
                                         <rect key="frame" x="0.0" y="0.0" width="256" height="57"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QWM-sA-CgD">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QWM-sA-CgD">
                                         <rect key="frame" x="0.0" y="61" width="256" height="48.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4BV-qD-cOs">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4BV-qD-cOs">
                                         <rect key="frame" x="0.0" y="113.5" width="256" height="57"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -3605,7 +3643,7 @@ https://calendly.com/creatingencores/free-10-minute-power-coaching-session-with-
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cmb-qM-zHF">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cmb-qM-zHF">
                                 <rect key="frame" x="274" y="202" width="30" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Ca"/>
@@ -3619,16 +3657,16 @@ https://calendly.com/creatingencores/free-10-minute-power-coaching-session-with-
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="  /  /    " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LMY-fe-2Cr">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="  /  /    " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LMY-fe-2Cr">
                                 <rect key="frame" x="204" y="202" width="56" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="lFw-E6-cpK">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="lFw-E6-cpK">
                                 <rect key="frame" x="22" y="246" width="17" height="138"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8tS-zi-l4X">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8tS-zi-l4X">
                                         <rect key="frame" x="0.0" y="0.0" width="17" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="17" id="mHP-D0-PQL"/>
@@ -3637,13 +3675,13 @@ https://calendly.com/creatingencores/free-10-minute-power-coaching-session-with-
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W58-sb-Zyb">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W58-sb-Zyb">
                                         <rect key="frame" x="0.0" y="57" width="17" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tv4-3k-sUn">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tv4-3k-sUn">
                                         <rect key="frame" x="0.0" y="114" width="17" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
@@ -3672,40 +3710,40 @@ https://calendly.com/creatingencores/free-10-minute-power-coaching-session-with-
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="K8D-eO-NXr">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="K8D-eO-NXr">
                                 <rect key="frame" x="24" y="166" width="272" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Action Plans" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKu-ac-L9c">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Action Plans" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKu-ac-L9c">
                                 <rect key="frame" x="16" y="204" width="108" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Mastermind" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhO-ZB-bc9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mastermind" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhO-ZB-bc9">
                                 <rect key="frame" x="16" y="417.5" width="103.5" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="8Nb-NJ-pLO">
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="8Nb-NJ-pLO">
                                 <rect key="frame" x="48" y="237" width="256" height="170.5"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zTY-d8-Rrt">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zTY-d8-Rrt">
                                         <rect key="frame" x="0.0" y="0.0" width="256" height="57"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hOw-9u-iwt">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hOw-9u-iwt">
                                         <rect key="frame" x="0.0" y="61" width="256" height="48.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CSP-Vr-zoY">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CSP-Vr-zoY">
                                         <rect key="frame" x="0.0" y="113.5" width="256" height="57"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>

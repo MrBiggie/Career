@@ -15,8 +15,7 @@ class FinishViewController: UIViewController {
         self.navigationController?.popToRootViewController(animated: true)
         
     }
-    
-    
+    @IBOutlet weak var ContactDetailText: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

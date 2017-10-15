@@ -13,6 +13,7 @@ import AVFoundation
 class WLBIntroductionViewController: UIViewController {
     
     var player: AVAudioPlayer?
+    var bgmPlayer: AVAudioPlayer?
     
     @IBOutlet weak var IntroductionLabel: UILabel!
     
@@ -21,6 +22,8 @@ class WLBIntroductionViewController: UIViewController {
         
         // Default URL
         var URL: URL = Bundle.main.url(forResource: "Four_Seasons_Autumn_Movt_1", withExtension: "mp3")!
+        // Default bgmURL
+        let bgmURL: URL = Bundle.main.url(forResource: "Four_Seasons_Autumn_Movt_1", withExtension: "mp3")!
         
          //Choose Audio URL accordiong to the title
         if(IntroductionLabel.text == "Work-life Balance"){
@@ -40,7 +43,12 @@ class WLBIntroductionViewController: UIViewController {
         }
         do {
             player = try AVAudioPlayer(contentsOf: URL)
+            player?.volume = 10
             player?.prepareToPlay()
+            bgmPlayer = try AVAudioPlayer(contentsOf: bgmURL)
+            bgmPlayer?.volume = 1
+            bgmPlayer?.prepareToPlay()
+            
         } catch let error {
             print(error.localizedDescription)
         }
@@ -50,17 +58,17 @@ class WLBIntroductionViewController: UIViewController {
     @IBAction func AudioPlayButton(_ sender: UIButton) {
         if(player?.isPlaying)!{
             player?.pause()
+            bgmPlayer?.pause()
         }else{
+            bgmPlayer?.play()
             player?.play()
         }
     }
     
-    
-    
     override func viewWillDisappear(_ animated: Bool) {
         player?.stop()
+        bgmPlayer?.stop()
     }
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

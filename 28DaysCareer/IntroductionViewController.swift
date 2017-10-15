@@ -19,6 +19,7 @@ class IntroductionViewController: UIViewController {
     }
     
     var player:AVPlayer?
+    var flag = true
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidLoad()
@@ -28,13 +29,35 @@ class IntroductionViewController: UIViewController {
         let videoURL = URL(fileURLWithPath: filePath!)
         // Video player
         player = AVPlayer(url: videoURL)
-        // Size an location
-        let playerLayer = AVPlayerLayer(player: player)
-        playerLayer.frame = self.view.bounds
-        // Add to view
-        self.view.layer.addSublayer(playerLayer)
-        // Play
-        player?.play()
+        
+        if flag{
+        let playerViewController = AVPlayerViewController()
+        playerViewController.player = player
+        self.present(playerViewController, animated: true) {
+            playerViewController.player!.play()
+        }
+            flag = false
+        }
+        
+//        // Size an location
+//        let playerLayer = AVPlayerLayer(player: player)
+//        playerLayer.frame = self.view.bounds
+//        // Add to view
+//        self.view.layer.addSublayer(playerLayer)
+//        // Play
+//        player?.play()
+    }
+    
+    @IBAction func PlayVideo(_ sender: UIButton) {
+       flag = true
+        if flag{
+            let playerViewController = AVPlayerViewController()
+            playerViewController.player = player
+            self.present(playerViewController, animated: true) {
+                playerViewController.player!.play()
+            }
+            flag = false
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
