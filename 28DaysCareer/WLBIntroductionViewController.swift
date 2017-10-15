@@ -36,7 +36,7 @@ class WLBIntroductionViewController: UIViewController {
             URL = Bundle.main.url(forResource: "apintroduction", withExtension: "m4a")!
         }
         if(IntroductionLabel.text == "Relaxation"){
-            URL = Bundle.main.url(forResource: "Four_Seasons_Autumn_Movt_1", withExtension: "mp3")!
+            URL = Bundle.main.url(forResource: "relaxation", withExtension: "m4a")!
         }
         do {
             player = try AVAudioPlayer(contentsOf: URL)

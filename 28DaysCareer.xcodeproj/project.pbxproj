@@ -19,6 +19,7 @@
 		576722041F615E4800799242 /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576722031F615E4800799242 /* IntroductionViewController.swift */; };
 		576B16171F8E5180001F56EF /* uvmintroduction.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 576B16151F8E517F001F56EF /* uvmintroduction.m4a */; };
 		576B16181F8E5180001F56EF /* apintroduction.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 576B16161F8E517F001F56EF /* apintroduction.m4a */; };
+		577754BE1F9308E700B5E46C /* relaxation.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 577754BD1F9308E600B5E46C /* relaxation.m4a */; };
 		577C99551F6EB5260096FCFC /* WLBWheelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577C99541F6EB5260096FCFC /* WLBWheelViewController.swift */; };
 		578526881F61640900B7B585 /* WLBIntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578526871F61640900B7B585 /* WLBIntroductionViewController.swift */; };
 		5785268D1F617DA000B7B585 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579578D11F6145230080DAD5 /* AppDelegate.swift */; };
@@ -80,6 +81,7 @@
 		576722031F615E4800799242 /* IntroductionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
 		576B16151F8E517F001F56EF /* uvmintroduction.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = uvmintroduction.m4a; sourceTree = "<group>"; };
 		576B16161F8E517F001F56EF /* apintroduction.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = apintroduction.m4a; sourceTree = "<group>"; };
+		577754BD1F9308E600B5E46C /* relaxation.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = relaxation.m4a; sourceTree = "<group>"; };
 		577C99541F6EB5260096FCFC /* WLBWheelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WLBWheelViewController.swift; sourceTree = "<group>"; };
 		578526871F61640900B7B585 /* WLBIntroductionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WLBIntroductionViewController.swift; sourceTree = "<group>"; };
 		5794CEA81F6F5C3600F93B39 /* VMPickPicturesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMPickPicturesViewController.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				5733529E1F8277B300F23E26 /* wlbintroduction.m4a */,
 				576B16151F8E517F001F56EF /* uvmintroduction.m4a */,
 				576B16161F8E517F001F56EF /* apintroduction.m4a */,
+				577754BD1F9308E600B5E46C /* relaxation.m4a */,
 				57B82CB21F7A29C5000156CE /* Four_Seasons_Autumn_Movt_1.mp3 */,
 				57C9322E1F6EB926004243F5 /* TKRadarChart.swift */,
 			);
@@ -346,6 +349,7 @@
 				576B16181F8E5180001F56EF /* apintroduction.m4a in Resources */,
 				57E60B4B1F615FC600544083 /* introduction.mp4 in Resources */,
 				576B16171F8E5180001F56EF /* uvmintroduction.m4a in Resources */,
+				577754BE1F9308E700B5E46C /* relaxation.m4a in Resources */,
 				579578D71F6145230080DAD5 /* Main.storyboard in Resources */,
 				57B82CB31F7A29C5000156CE /* Four_Seasons_Autumn_Movt_1.mp3 in Resources */,
 			);
