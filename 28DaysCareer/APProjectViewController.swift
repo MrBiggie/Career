@@ -8,12 +8,11 @@
 
 import UIKit
 import CoreData
+import EventKit
 
 class APProjectViewController: UIViewController {
 
-    
     @IBOutlet weak var ProjectGoal: UITextField!
-    
   
     @IBOutlet weak var APOne: UITextView!
     
@@ -21,9 +20,9 @@ class APProjectViewController: UIViewController {
     
     @IBOutlet weak var APThree: UITextView!
     
-    
-    
     @IBOutlet weak var Mastermind: UITextView!
+    
+    var keyBoardNeedLayout: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,8 +46,12 @@ class APProjectViewController: UIViewController {
         Mastermind.layer.borderWidth = 1
         Mastermind.layer.cornerRadius = 16
       
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(APProjectViewController.keyboardWillShow(notification:)), name:NSNotification.Name.UIKeyboardWillShow, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(APProjectViewController.keyboardWillHide(notification:)), name:NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
     }
-
     
     @IBOutlet weak var DateLabel: UILabel!
     
@@ -88,13 +91,13 @@ class APProjectViewController: UIViewController {
     @IBAction func SaveButton(_ sender: UIButton) {
         deletePrevious()
         InsertAndSave()
-        
     }
     
     
     @IBAction func AP23SaveButton(_ sender: UIButton) {
         InsertAndSave()
     }
+    
     
     
     
@@ -115,7 +118,6 @@ class APProjectViewController: UIViewController {
                     print(result.description)
                 }
             }
-            
             
             //Insert Career and save
             let item = NSEntityDescription.insertNewObject(forEntityName: "APProject", into: context)
@@ -158,6 +160,59 @@ class APProjectViewController: UIViewController {
         catch
         {
             //PROCESS ERROR
+        }
+    }
+    
+    
+    func keyboardWillShow(notification: NSNotification) {
+        if(APThree.isFirstResponder||Mastermind.isFirstResponder){
+            print("show")
+            if let userInfo = notification.userInfo, let value = userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue,
+                let duration = userInfo[UIKeyboardAnimationDurationUserInfoKey] as? Double,
+                let curve = userInfo[UIKeyboardAnimationCurveUserInfoKey] as? UInt {
+                
+                let frame = value.cgRectValue
+                let intersection = frame.intersection(self.view.frame)
+                
+                let deltaY = intersection.height
+                
+                if keyBoardNeedLayout {
+                    UIView.animate(withDuration: duration, delay: 0.0,
+                                   options: UIViewAnimationOptions(rawValue: curve),
+                                   animations: { _ in
+                                    self.view.frame = self.CGRectMake(0,-deltaY,self.view.bounds.width,self.view.bounds.height)
+                                    self.keyBoardNeedLayout = false
+                                    self.view.layoutIfNeeded()
+                    }, completion: nil)
+                }
+            }
+        }
+    }
+    
+    func CGRectMake(_ x: CGFloat, _ y: CGFloat, _ width: CGFloat, _ height: CGFloat) -> CGRect {
+        return CGRect(x: x, y: y, width: width, height: height)
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        print("hide")
+        if let userInfo = notification.userInfo,
+            let value = userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue,
+            let duration = userInfo[UIKeyboardAnimationDurationUserInfoKey] as? Double,
+            let curve = userInfo[UIKeyboardAnimationCurveUserInfoKey] as? UInt {
+            
+            let frame = value.cgRectValue
+            let intersection = frame.intersection(self.view.frame)
+            
+            let deltaY = intersection.height
+            
+            UIView.animate(withDuration: duration, delay: 0.0,
+                           options: UIViewAnimationOptions(rawValue: curve),
+                           animations: { _ in
+                            self.view.frame = self.CGRectMake(0,deltaY,self.view.bounds.width,self.view.bounds.height)
+                            self.keyBoardNeedLayout = true
+                            self.view.layoutIfNeeded()
+            }, completion: nil)
+            
         }
     }
     
