@@ -61,6 +61,7 @@ class WLBItemViewController: UIViewController {
             let item = NSEntityDescription.insertNewObject(forEntityName: "WLBItem", into: context)
             item.setValue(sliderValue, forKey: "career")
             try context.save()
+            
         }
         catch
         {
@@ -99,7 +100,7 @@ class WLBItemViewController: UIViewController {
     @IBOutlet weak var slider: UISlider!
     
     func updateItems(Type : String){
-        let sliderValue: Int16 = Int16(Int(slider.value))
+        let sliderValue: Double = Double(slider.value)
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
         let context = appDelegate.persistentContainer.viewContext

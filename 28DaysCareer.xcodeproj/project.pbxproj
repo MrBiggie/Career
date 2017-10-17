@@ -463,11 +463,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-28DaysCareer/Pods-28DaysCareer-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/TKRadarChart/TKRadarChart.framework",
+				"${BUILT_PRODUCTS_DIR}/PieCharts/PieCharts.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TKRadarChart.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PieCharts.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

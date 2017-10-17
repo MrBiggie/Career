@@ -4,7 +4,7 @@ platform :ios, '10.3'
 target '28DaysCareer' do
  
     inherit! :search_paths
-    pod 'TKRadarChart', '~> 1.3'
+    pod 'PieCharts', '~> 0.0'
     use_frameworks!
 
 end

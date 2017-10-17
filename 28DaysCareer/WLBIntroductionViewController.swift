@@ -15,6 +15,8 @@ class WLBIntroductionViewController: UIViewController {
     var player: AVAudioPlayer?
     var bgmPlayer: AVAudioPlayer?
     
+    var bgmFlag = false
+    
     @IBOutlet weak var IntroductionLabel: UILabel!
     
     override func viewDidLoad() {
@@ -25,7 +27,7 @@ class WLBIntroductionViewController: UIViewController {
         // Default bgmURL
         let bgmURL: URL = Bundle.main.url(forResource: "Four_Seasons_Autumn_Movt_1", withExtension: "mp3")!
         
-         //Choose Audio URL accordiong to the title
+        // Choose Audio URL accordiong to the title
         if(IntroductionLabel.text == "Work-life Balance"){
             URL = Bundle.main.url(forResource: "wlbintroduction", withExtension: "m4a")!
         }
@@ -39,16 +41,18 @@ class WLBIntroductionViewController: UIViewController {
             URL = Bundle.main.url(forResource: "apintroduction", withExtension: "m4a")!
         }
         if(IntroductionLabel.text == "Relaxation"){
+            bgmFlag = true
             URL = Bundle.main.url(forResource: "relaxation", withExtension: "m4a")!
         }
         do {
             player = try AVAudioPlayer(contentsOf: URL)
             player?.volume = 10
             player?.prepareToPlay()
+            if bgmFlag{
             bgmPlayer = try AVAudioPlayer(contentsOf: bgmURL)
             bgmPlayer?.volume = 1
             bgmPlayer?.prepareToPlay()
-            
+            }
         } catch let error {
             print(error.localizedDescription)
         }
@@ -58,10 +62,14 @@ class WLBIntroductionViewController: UIViewController {
     @IBAction func AudioPlayButton(_ sender: UIButton) {
         if(player?.isPlaying)!{
             player?.pause()
+            if bgmFlag{
             bgmPlayer?.pause()
+            }
         }else{
-            bgmPlayer?.play()
             player?.play()
+            if bgmFlag{
+            bgmPlayer?.play()
+            }
         }
     }
     

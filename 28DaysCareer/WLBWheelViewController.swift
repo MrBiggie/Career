@@ -6,121 +6,65 @@
 //  Copyright © 2017年 zhaoxuelin. All rights reserved.
 //
 import UIKit
-import TKRadarChart
 import CoreData
+import PieCharts
 
-class WLBWheelViewController: UIViewController, TKRadarChartDataSource, TKRadarChartDelegate, UITableViewDelegate {
+class WLBWheelViewController: UIViewController, UITableViewDelegate,PieChartDelegate {
+    
+    var career:Double = 5
+    var family:Double = 5
+    var spirituality:Double = 5
+    var learning:Double = 5
+    var finance:Double = 5
+    var fun:Double = 5
+    var health:Double = 5
+    var friends:Double = 5
+    
+    let chartView: PieChart = PieChart(frame: CGRect(x: 0, y: UIScreen.main.bounds.height/4, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width))
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let w = view.bounds.width
-    
-        let chart = TKRadarChart(frame: CGRect(x: 0, y: 0, width: w, height: w))
-        chart.configuration.radius = w/3.5
-        chart.dataSource = self
-        chart.delegate = self
-        chart.center = view.center
-        chart.reloadData()
-        view.addSubview(chart)
-    }
-    
-    func numberOfStepForRadarChart(_ radarChart: TKRadarChart) -> Int {
-        return 10
-    }
-    func numberOfRowForRadarChart(_ radarChart: TKRadarChart) -> Int {
-        return 8
-    }
-    func numberOfSectionForRadarChart(_ radarChart: TKRadarChart) -> Int {
-        return 1
-    }
-    
-    func titleOfRowForRadarChart(_ radarChart: TKRadarChart, row: Int) -> String {
-        if(row == 0){
-            return "Career"
-        }
-        if(row == 1){
-            return "Family"
-        }
-        if(row == 2){
-            return "Spirituality"
-        }
-        if(row == 3){
-            return "Learning"
-        }
-        if(row == 4){
-            return "Finance"
-        }
-        if(row == 5){
-            return "Fun"
-        }
-        if(row == 6){
-            return "Health"
-        }
-        if(row == 7){
-            return "Friends"
-        }
-        return "Nil"
+        self.getValue()
+        self.view.addSubview(chartView)
     }
     
     
-    
-    func valueOfSectionForRadarChart(withRow row: Int, section: Int) -> CGFloat {
+    func getValue(){
         //Show the Item details
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        
         let context = appDelegate.persistentContainer.viewContext
-        
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "WLBItem")
         request.returnsObjectsAsFaults = false
-        
-        
-        if section == 0 {
+
             do
             {
                 let results = try context.fetch(request)
                 
                 if results.count > 0{
                     for result in results as! [NSManagedObject]{
-                        if let careerValue = result.value(forKey: "career") as? Int16  {
-                            if row == 0{
-                            return CGFloat(careerValue/2)
-                            }
+                        if let careerValue = result.value(forKey: "career") as? Double  {
+                           career = careerValue
                         }
-                        if let familyValue = result.value(forKey: "family") as? Int16{
-                            if row == 1{
-                                return CGFloat(familyValue/2)
-                            }
+                        if let familyValue = result.value(forKey: "family") as? Double{
+                           family = familyValue
                         }
-                        if let spiritualityValue = result.value(forKey: "spirituality") as? Int16{
-                            if row == 2{
-                                return CGFloat(spiritualityValue/2)
-                            }
+                        if let spiritualityValue = result.value(forKey: "spirituality") as? Double{
+                         spirituality = spiritualityValue
                         }
-                        if let learningValue = result.value(forKey: "learning") as? Int16{
-                            if row == 3{
-                                return CGFloat(learningValue/2)
-                            }
+                        if let learningValue = result.value(forKey: "learning") as? Double{
+                           learning = learningValue
                         }
-                        if let financeValue = result.value(forKey: "finance") as? Int16{
-                            if row == 4{
-                                return CGFloat(financeValue/2)
-                            }
+                        if let financeValue = result.value(forKey: "finance") as? Double{
+                           finance = financeValue
                         }
-                        if let funValue = result.value(forKey: "fun") as? Int16{
-                            if row == 5{
-                                return CGFloat(funValue/2)
-                            }
+                        if let funValue = result.value(forKey: "fun") as? Double{
+                           fun = funValue
                         }
-                        if let healthValue = result.value(forKey: "health") as? Int16{
-                            if row == 6{
-                                return CGFloat(healthValue/2)
-                            }
+                        if let healthValue = result.value(forKey: "health") as? Double{
+                            health = healthValue
                         }
-                        if let friendsValue = result.value(forKey: "friends") as? Int16{
-                            if row == 7{
-                                return CGFloat(friendsValue/2)
-                            }
+                        if let friendsValue = result.value(forKey: "friends") as? Double{
+                            friends = friendsValue
                         }
                     }
                 }
@@ -129,76 +73,120 @@ class WLBWheelViewController: UIViewController, TKRadarChartDataSource, TKRadarC
             {
                 //PROCESS ERROR
             }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        chartView.layers = [createCustomViewsLayer(), createTextLayer()]
+        chartView.delegate = self
+        chartView.models = createModels() // order is important - models have to be set at the end
+    }
+    
+    // MARK: - PieChartDelegate
+    
+    func onSelected(slice: PieSlice, selected: Bool) {
+        print("Selected: \(selected), slice: \(slice)")
+    }
+    
+    // MARK: - Models
+    
+    fileprivate func createModels() -> [PieSliceModel] {
+        let alpha: CGFloat = 0.5
+        
+        return [
+            PieSliceModel(value: career, color: UIColor.yellow.withAlphaComponent(alpha)),
+            PieSliceModel(value: family, color: UIColor.blue.withAlphaComponent(alpha)),
+            PieSliceModel(value: spirituality, color: UIColor.green.withAlphaComponent(alpha)),
+            PieSliceModel(value: learning, color: UIColor.cyan.withAlphaComponent(alpha)),
+            PieSliceModel(value: finance, color: UIColor.red.withAlphaComponent(alpha)),
+            PieSliceModel(value: fun, color: UIColor.magenta.withAlphaComponent(alpha)),
+            PieSliceModel(value: health, color: UIColor.orange.withAlphaComponent(alpha)),
+            PieSliceModel(value: friends, color: UIColor.purple.withAlphaComponent(alpha))
+        ]
+    }
+    
+    // MARK: - Layers
+    
+    fileprivate func createCustomViewsLayer() -> PieCustomViewsLayer {
+        let viewLayer = PieCustomViewsLayer()
+        
+        let settings = PieCustomViewsLayerSettings()
+        settings.viewRadius = 135
+        settings.hideOnOverflow = false
+        viewLayer.settings = settings
+        
+        viewLayer.viewGenerator = createViewGenerator()
+        
+        return viewLayer
+    }
+    
+    fileprivate func createTextLayer() -> PiePlainTextLayer {
+        let textLayerSettings = PiePlainTextLayerSettings()
+        textLayerSettings.viewRadius = 60
+        textLayerSettings.hideOnOverflow = true
+        textLayerSettings.label.font = UIFont.systemFont(ofSize: 12)
+        
+        let formatter = NumberFormatter()
+        formatter.maximumFractionDigits = 1
+        textLayerSettings.label.textGenerator = {slice in
+            return formatter.string(from: slice.data.percentage * 100 as NSNumber).map{"\($0)%"} ?? ""
+        }
+        
+        let textLayer = PiePlainTextLayer()
+        textLayer.settings = textLayerSettings
+        return textLayer
+    }
+    
+    fileprivate func createViewGenerator() -> (PieSlice, CGPoint) -> UIView {
+        return {slice, center in
             
+            let container = UIView()
+            container.frame.size = CGSize(width: 100, height: 40)
+            container.center = center
+            let alpha: CGFloat = 0.5
+            if true {
+                let specialTextLabel = UILabel()
+                specialTextLabel.textAlignment = .center
+                if slice.data.id == 0 {
+                    specialTextLabel.textColor = UIColor.yellow.withAlphaComponent(alpha)
+                    specialTextLabel.text = "Career"
+                    specialTextLabel.font = UIFont.boldSystemFont(ofSize: 18)
+                }else if slice.data.id == 1 {
+                    specialTextLabel.textColor = UIColor.blue.withAlphaComponent(alpha)
+                    specialTextLabel.text = "Family"
+                    specialTextLabel.font = UIFont.boldSystemFont(ofSize: 18)
+                }else if slice.data.id == 2 {
+                    specialTextLabel.textColor = UIColor.green.withAlphaComponent(alpha)
+                    specialTextLabel.text = "Spirituality"
+                    specialTextLabel.font = UIFont.boldSystemFont(ofSize: 18)
+                }else if slice.data.id == 3 {
+                    specialTextLabel.textColor = UIColor.cyan.withAlphaComponent(alpha)
+                    specialTextLabel.text = "Learning"
+                    specialTextLabel.font = UIFont.boldSystemFont(ofSize: 18)
+                }else if slice.data.id == 4 {
+                    specialTextLabel.textColor = UIColor.red.withAlphaComponent(alpha)
+                    specialTextLabel.text = "Finance"
+                    specialTextLabel.font = UIFont.boldSystemFont(ofSize: 18)
+                }else if slice.data.id == 5 {
+                    specialTextLabel.textColor = UIColor.magenta.withAlphaComponent(alpha)
+                    specialTextLabel.text = "Fun"
+                    specialTextLabel.font = UIFont.boldSystemFont(ofSize: 18)
+                }else if slice.data.id == 6 {
+                    specialTextLabel.textColor = UIColor.orange.withAlphaComponent(alpha)
+                    specialTextLabel.text = "Health"
+                    specialTextLabel.font = UIFont.boldSystemFont(ofSize: 18)
+                }else if slice.data.id == 7 {
+                    specialTextLabel.textColor = UIColor.purple.withAlphaComponent(alpha)
+                    specialTextLabel.text = "Friends"
+                    specialTextLabel.font = UIFont.boldSystemFont(ofSize: 18)
+                }
+                
+                specialTextLabel.sizeToFit()
+                specialTextLabel.frame = CGRect(x: 0, y: 30, width: 100, height: 20)
+                container.addSubview(specialTextLabel)
+                container.frame.size = CGSize(width: 100, height: 60)
+            }
+            return container
         }
-        return 3
-    }
-    
-    func colorOfLineForRadarChart(_ radarChart: TKRadarChart) -> UIColor {
-        return UIColor(red:0.337,  green:0.847,  blue:0.976, alpha:1)
-    }
-    
-    func colorOfFillStepForRadarChart(_ radarChart: TKRadarChart, step: Int) -> UIColor {
-        switch step {
-        case 1:
-            return UIColor(red:0.545,  green:0.906,  blue:0.996, alpha:1)
-        case 2:
-            return UIColor(red:0.706,  green:0.929,  blue:0.988, alpha:1)
-        case 3:
-            return UIColor(red:0.831,  green:0.949,  blue:0.984, alpha:1)
-        case 4:
-            return UIColor(red:0.922,  green:0.976,  blue:0.988, alpha:1)
-        default:
-            return UIColor.white
-        }
-    }
-    
-    func colorOfSectionFillForRadarChart(_ radarChart: TKRadarChart, section: Int) -> UIColor {
-        if section == 0 {
-            return UIColor(red:1,  green:0.867,  blue:0.012, alpha:0.4)
-        } else {
-            return UIColor(red:0,  green:0.788,  blue:0.543, alpha:0.4)
-        }
-    }
-    
-    func colorOfSectionBorderForRadarChart(_ radarChart: TKRadarChart, section: Int) -> UIColor {
-        if section == 0 {
-            return UIColor(red:1,  green:0.867,  blue:0.012, alpha:1)
-        } else {
-            return UIColor(red:0,  green:0.788,  blue:0.543, alpha:1)
-        }
-    }
-    
-    func colorOfTitleForRadarChart(_ radarChart: TKRadarChart, row: Int) -> UIColor {
-        if(row == 0){
-            return UIColor.yellow
-        }
-        if(row == 1){
-            return UIColor.cyan
-        }
-        if(row == 2){
-            return UIColor.green
-        }
-        if(row == 3){
-            return UIColor.purple
-        }
-        if(row == 4){
-            return UIColor.orange
-        }
-        if(row == 5){
-            return UIColor.red
-        }
-        if(row == 6){
-            return UIColor.brown
-        }
-        if(row == 7){
-            return UIColor.blue
-        }
-        return UIColor.black
-    }
-    
-    func fontOfTitleForRadarChart(_ radarChart: TKRadarChart) -> UIFont {
-        return UIFont(name: "AppleGothic", size: 15)!
     }
     
     
