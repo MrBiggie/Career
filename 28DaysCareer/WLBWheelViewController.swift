@@ -28,6 +28,9 @@ class WLBWheelViewController: UIViewController, UITableViewDelegate,PieChartDele
         self.view.addSubview(chartView)
     }
     
+    @IBAction func StartNewWLB(_ sender: UIButton) {
+        setDefaultValue()
+    }
     
     func getValue(){
         //Show the Item details
@@ -35,44 +38,108 @@ class WLBWheelViewController: UIViewController, UITableViewDelegate,PieChartDele
         let context = appDelegate.persistentContainer.viewContext
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "WLBItem")
         request.returnsObjectsAsFaults = false
-
-            do
-            {
-                let results = try context.fetch(request)
-                
-                if results.count > 0{
-                    for result in results as! [NSManagedObject]{
-                        if let careerValue = result.value(forKey: "career") as? Double  {
-                           career = careerValue
-                        }
-                        if let familyValue = result.value(forKey: "family") as? Double{
-                           family = familyValue
-                        }
-                        if let spiritualityValue = result.value(forKey: "spirituality") as? Double{
-                         spirituality = spiritualityValue
-                        }
-                        if let learningValue = result.value(forKey: "learning") as? Double{
-                           learning = learningValue
-                        }
-                        if let financeValue = result.value(forKey: "finance") as? Double{
-                           finance = financeValue
-                        }
-                        if let funValue = result.value(forKey: "fun") as? Double{
-                           fun = funValue
-                        }
-                        if let healthValue = result.value(forKey: "health") as? Double{
-                            health = healthValue
-                        }
-                        if let friendsValue = result.value(forKey: "friends") as? Double{
-                            friends = friendsValue
-                        }
+        
+        do
+        {
+            let results = try context.fetch(request)
+            
+            if results.count > 0{
+                for result in results as! [NSManagedObject]{
+                    if let careerValue = result.value(forKey: "career") as? Double  {
+                        career = careerValue
+                    }
+                    if let familyValue = result.value(forKey: "family") as? Double{
+                        family = familyValue
+                    }
+                    if let spiritualityValue = result.value(forKey: "spirituality") as? Double{
+                        spirituality = spiritualityValue
+                    }
+                    if let learningValue = result.value(forKey: "learning") as? Double{
+                        learning = learningValue
+                    }
+                    if let financeValue = result.value(forKey: "finance") as? Double{
+                        finance = financeValue
+                    }
+                    if let funValue = result.value(forKey: "fun") as? Double{
+                        fun = funValue
+                    }
+                    if let healthValue = result.value(forKey: "health") as? Double{
+                        health = healthValue
+                    }
+                    if let friendsValue = result.value(forKey: "friends") as? Double{
+                        friends = friendsValue
                     }
                 }
             }
-            catch
-            {
-                //PROCESS ERROR
+        }
+        catch
+        {
+            //PROCESS ERROR
+        }
+    }
+    
+    func setDefaultValue(){
+        let sliderValue: Double = 5.0
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        let context = appDelegate.persistentContainer.viewContext
+        
+        //Requst
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "WLBItem")
+        request.returnsObjectsAsFaults = false
+        do
+        {
+            let results = try context.fetch(request) as! [WLBItem]
+            // Insert
+            if results.count == 0{
+                let item = NSEntityDescription.insertNewObject(forEntityName: "WLBItem", into: context)
+                item.setValue(5, forKey: "career")
+                item.setValue(5, forKey: "family")
+                item.setValue(5, forKey: "spirituality")
+                item.setValue(5, forKey: "learning")
+                item.setValue(5, forKey: "finance")
+                item.setValue(5, forKey: "fun")
+                item.setValue(5, forKey: "health")
+                item.setValue(5, forKey: "friends")
+                item.setValue(true, forKey: "careerslider")
+                item.setValue(true, forKey: "familyslider")
+                item.setValue(true, forKey: "spiritualityslider")
+                item.setValue(true, forKey: "learningslider")
+                item.setValue(true, forKey: "financeslider")
+                item.setValue(true, forKey: "funslider")
+                item.setValue(true, forKey: "healthslider")
+                item.setValue(true, forKey: "friendsslider")
+                try context.save()
             }
+            //Update
+            if results.count > 0{
+                for result in results {
+                    result.career = sliderValue
+                    result.family = sliderValue
+                    result.spirituality = sliderValue
+                    result.learning = sliderValue
+                    result.finance = sliderValue
+                    result.fun = sliderValue
+                    result.health = sliderValue
+                    result.friends = sliderValue
+                    result.careerslider = true
+                    result.familyslider = true
+                    result.spiritualityslider = true
+                    result.learningslider = true
+                    result.financeslider = true
+                    result.funslider = true
+                    result.healthslider = true
+                    result.friendsslider = true
+                    
+                    try context.save()
+                }
+            }
+        }
+        catch
+        {
+            //PROCESS ERROR
+        }
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {

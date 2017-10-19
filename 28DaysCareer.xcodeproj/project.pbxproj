@@ -45,6 +45,7 @@
 		57EEEDE81F934BEC0074D4DA /* icon 60x60.png in Resources */ = {isa = PBXBuildFile; fileRef = 57EEEDE01F934BEA0074D4DA /* icon 60x60.png */; };
 		57EEEDE91F934BEC0074D4DA /* icon 167x167.png in Resources */ = {isa = PBXBuildFile; fileRef = 57EEEDE11F934BEB0074D4DA /* icon 167x167.png */; };
 		57EEEDEB1F9351630074D4DA /* VMReflectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EEEDEA1F9351630074D4DA /* VMReflectionViewController.swift */; };
+		57F908331F98B5360020E3B0 /* PieCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57F908341F98B5360020E3B0 /* PieCharts.framework */; };
 		AB52F341E07104328B1A047F /* Pods_28DaysCareer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5941EB0B70D0F8CDBE0C310 /* Pods_28DaysCareer.framework */; };
 /* End PBXBuildFile section */
 
@@ -124,6 +125,7 @@
 		57EEEDE01F934BEA0074D4DA /* icon 60x60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon 60x60.png"; sourceTree = "<group>"; };
 		57EEEDE11F934BEB0074D4DA /* icon 167x167.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon 167x167.png"; sourceTree = "<group>"; };
 		57EEEDEA1F9351630074D4DA /* VMReflectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMReflectionViewController.swift; sourceTree = "<group>"; };
+		57F908341F98B5360020E3B0 /* PieCharts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PieCharts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5941EB0B70D0F8CDBE0C310 /* Pods_28DaysCareer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_28DaysCareer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5B5DF898B669FB78DFA0B3D /* Pods-28DaysCareer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-28DaysCareer.release.xcconfig"; path = "Pods/Target Support Files/Pods-28DaysCareer/Pods-28DaysCareer.release.xcconfig"; sourceTree = "<group>"; };
 		FC6456CADD9B88F10F6224EB /* Pods_28DaysCareerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_28DaysCareerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57F908331F98B5360020E3B0 /* PieCharts.framework in Frameworks */,
 				576722011F615DA100799242 /* AVFoundation.framework in Frameworks */,
 				576722021F615DA100799242 /* AVKit.framework in Frameworks */,
 				AB52F341E07104328B1A047F /* Pods_28DaysCareer.framework in Frameworks */,
@@ -260,6 +263,7 @@
 		EB9D3B95BFE4C4CF3D99C967 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				57F908341F98B5360020E3B0 /* PieCharts.framework */,
 				576721FF1F615DA100799242 /* AVFoundation.framework */,
 				576722001F615DA100799242 /* AVKit.framework */,
 				C5941EB0B70D0F8CDBE0C310 /* Pods_28DaysCareer.framework */,
