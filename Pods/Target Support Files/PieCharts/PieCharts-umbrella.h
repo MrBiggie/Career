@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double TKRadarChartVersionNumber;
-FOUNDATION_EXPORT const unsigned char TKRadarChartVersionString[];
+FOUNDATION_EXPORT double PieChartsVersionNumber;
+FOUNDATION_EXPORT const unsigned char PieChartsVersionString[];
 
