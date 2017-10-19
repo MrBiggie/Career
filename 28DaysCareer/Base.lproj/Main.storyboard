@@ -381,10 +381,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="yQd-Pk-scp">
-                                        <rect key="frame" x="6" y="0.0" width="252.5" height="31"/>
+                                        <rect key="frame" x="6" y="0.0" width="260" height="31"/>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oAq-Zj-oPr">
-                                        <rect key="frame" x="264.5" y="0.0" width="7.5" height="30"/>
+                                        <rect key="frame" x="272" y="0.0" width="0.0" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1247,10 +1247,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="qjx-Kr-UGJ">
-                                        <rect key="frame" x="6" y="0.0" width="252.5" height="31"/>
+                                        <rect key="frame" x="6" y="0.0" width="260" height="31"/>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUA-g4-KYA">
-                                        <rect key="frame" x="264.5" y="0.0" width="7.5" height="30"/>
+                                        <rect key="frame" x="272" y="0.0" width="0.0" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1366,10 +1366,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="vv8-2a-CbE">
-                                        <rect key="frame" x="6" y="0.0" width="252.5" height="31"/>
+                                        <rect key="frame" x="6" y="0.0" width="260" height="31"/>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YMW-AL-kdn">
-                                        <rect key="frame" x="264.5" y="0.0" width="7.5" height="30"/>
+                                        <rect key="frame" x="272" y="0.0" width="0.0" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1485,10 +1485,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="3nU-oI-NNd">
-                                        <rect key="frame" x="6" y="0.0" width="252.5" height="31"/>
+                                        <rect key="frame" x="6" y="0.0" width="260" height="31"/>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JfY-kk-RaJ">
-                                        <rect key="frame" x="264.5" y="0.0" width="7.5" height="30"/>
+                                        <rect key="frame" x="272" y="0.0" width="0.0" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1604,10 +1604,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="oek-ZX-grw">
-                                        <rect key="frame" x="6" y="0.0" width="252.5" height="31"/>
+                                        <rect key="frame" x="6" y="0.0" width="260" height="31"/>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aID-Po-JQ3">
-                                        <rect key="frame" x="264.5" y="0.0" width="7.5" height="30"/>
+                                        <rect key="frame" x="272" y="0.0" width="0.0" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1723,10 +1723,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="aFi-vk-c2V">
-                                        <rect key="frame" x="6" y="0.0" width="252.5" height="31"/>
+                                        <rect key="frame" x="6" y="0.0" width="260" height="31"/>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2uz-vR-hei">
-                                        <rect key="frame" x="264.5" y="0.0" width="7.5" height="30"/>
+                                        <rect key="frame" x="272" y="0.0" width="0.0" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1842,10 +1842,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="nSw-i9-mMg">
-                                        <rect key="frame" x="6" y="0.0" width="252.5" height="31"/>
+                                        <rect key="frame" x="6" y="0.0" width="260" height="31"/>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIT-ti-lbo">
-                                        <rect key="frame" x="264.5" y="0.0" width="7.5" height="30"/>
+                                        <rect key="frame" x="272" y="0.0" width="0.0" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1961,10 +1961,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="IUH-7S-Haq">
-                                        <rect key="frame" x="6" y="0.0" width="252.5" height="31"/>
+                                        <rect key="frame" x="6" y="0.0" width="260" height="31"/>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bu7-GH-diK">
-                                        <rect key="frame" x="264.5" y="0.0" width="7.5" height="30"/>
+                                        <rect key="frame" x="272" y="0.0" width="0.0" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
