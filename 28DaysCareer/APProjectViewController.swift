@@ -11,9 +11,9 @@ import CoreData
 import EventKit
 
 class APProjectViewController: UIViewController {
-
+    
     @IBOutlet weak var ProjectGoal: UITextField!
-  
+    
     @IBOutlet weak var APOne: UITextView!
     
     @IBOutlet weak var APTwo: UITextView!
@@ -21,6 +21,8 @@ class APProjectViewController: UIViewController {
     @IBOutlet weak var APThree: UITextView!
     
     @IBOutlet weak var Mastermind: UITextView!
+    
+    @IBOutlet weak var ProjectGoalLabel: UILabel!
     
     var keyBoardNeedLayout: Bool = true
     
@@ -45,7 +47,6 @@ class APProjectViewController: UIViewController {
         Mastermind.layer.borderColor = UIColor.blue.cgColor
         Mastermind.layer.borderWidth = 1
         Mastermind.layer.cornerRadius = 16
-      
         
         NotificationCenter.default.addObserver(self, selector: #selector(APProjectViewController.keyboardWillShow(notification:)), name:NSNotification.Name.UIKeyboardWillShow, object: nil)
         
@@ -86,20 +87,18 @@ class APProjectViewController: UIViewController {
         
         self.present(alertController, animated: true, completion: nil)
     }
-
+    
+    
+    
     // Save the information
     @IBAction func SaveButton(_ sender: UIButton) {
-        deletePrevious()
-        InsertAndSave()
+        //InsertAndSave()
     }
     
     
     @IBAction func AP23SaveButton(_ sender: UIButton) {
-        InsertAndSave()
+        // InsertAndSave()
     }
-    
-    
-    
     
     func InsertAndSave(){
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -118,18 +117,15 @@ class APProjectViewController: UIViewController {
                     print(result.description)
                 }
             }
-            
             //Insert Career and save
             let item = NSEntityDescription.insertNewObject(forEntityName: "APProject", into: context)
+            item.setValue(ProjectGoalLabel.text, forKey: "title")
             item.setValue(ProjectGoal.text, forKey: "goal")
             item.setValue(DateLabel.text, forKey: "date")
             item.setValue(APOne.text, forKey: "ap1")
             item.setValue(APTwo.text, forKey: "ap2")
             item.setValue(APThree.text, forKey: "ap3")
             item.setValue(Mastermind.text, forKey: "mastermind")
-            
-           
-            
             try context.save()
         }
         catch
@@ -138,24 +134,81 @@ class APProjectViewController: UIViewController {
         }
     }
     
-    func deletePrevious(){
+    override func viewWillDisappear(_ animated: Bool) {
+        if ProjectGoalLabel.text != "Project Sample"{
+            updateValue()
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if ProjectGoalLabel.text != "Project Sample"{
+        getValue()
+        }
+    }
+    
+    func updateValue(){
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        
         let context = appDelegate.persistentContainer.viewContext
-        
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "APProject")
         request.returnsObjectsAsFaults = false
+        let condition = "title='"+ProjectGoalLabel.text!+"'"
+        let predicate = NSPredicate(format: condition,"")
+        request.predicate = predicate
+        
         do
         {
-            //Delete previous data
             let results = try context.fetch(request)
-            
+
+            // Show the data
+            if results.count == 0{
+                InsertAndSave()
+            }
             if results.count > 0{
-                for result in results as! [NSManagedObject]{
-                    context.delete(result)
+                for result in results as! [APProject]{
+                    result.title = ProjectGoalLabel.text!
+                    result.date = DateLabel.text!
+                    result.goal = ProjectGoal.text!
+                    result.ap1 = APOne.text!
+                    result.ap2 = APTwo.text!
+                    result.ap3 = APThree.text!
+                    result.mastermind = Mastermind.text!
+                    try context.save()
+                }
+                
+            }
+        }
+        catch
+        {
+            //PROCESS ERROR
+        }
+    }
+    
+    func getValue(){
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "APProject")
+        request.returnsObjectsAsFaults = false
+        let condition = "title='"+ProjectGoalLabel.text!+"'"
+        let predicate = NSPredicate(format: condition,"")
+        request.predicate = predicate
+        do
+        {
+            let results = try context.fetch(request)
+            // Show the data
+            if results.count == 0{
+                InsertAndSave()
+            }
+            if results.count > 0{
+                for result in results as! [APProject]{
+                    ProjectGoalLabel.text = result.title
+                    ProjectGoal.text = result.goal
+                    DateLabel.text = result.date
+                    APOne.text = result.ap1
+                    APTwo.text = result.ap2
+                    APThree.text = result.ap3
+                    Mastermind.text = result.mastermind
                 }
             }
-            try context.save()
         }
         catch
         {
@@ -194,7 +247,7 @@ class APProjectViewController: UIViewController {
     }
     
     func keyboardWillHide(notification: NSNotification) {
-        print("hide")
+        //print("hide")
         if let userInfo = notification.userInfo,
             let value = userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue,
             let duration = userInfo[UIKeyboardAnimationDurationUserInfoKey] as? Double,
@@ -225,5 +278,5 @@ class APProjectViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    
 }

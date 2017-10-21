@@ -972,6 +972,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="APDone:" destination="lAD-P1-5kw" eventType="touchUpInside" id="EYE-SD-k2t"/>
                                     <segue destination="TiI-xY-os2" kind="push" id="wmJ-Mv-JJv"/>
                                 </connections>
                             </button>
@@ -3220,6 +3221,7 @@ https://calendly.com/creatingencores/free-10-minute-power-coaching-session-with-
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="SaveButton:" destination="aV3-8f-yRF" eventType="touchUpInside" id="hrB-qh-RP8"/>
                                     <segue destination="r0O-q9-4A9" kind="push" id="KtH-Xk-njQ"/>
                                 </connections>
                             </button>
@@ -3332,6 +3334,7 @@ https://calendly.com/creatingencores/free-10-minute-power-coaching-session-with-
                         <outlet property="APTwo" destination="9jt-WR-Nmn" id="Kt8-CM-SFJ"/>
                         <outlet property="Mastermind" destination="sFq-DY-akV" id="uzZ-NP-sBc"/>
                         <outlet property="ProjectGoal" destination="vka-Sa-9JO" id="hLP-YR-3xI"/>
+                        <outlet property="ProjectGoalLabel" destination="32X-33-WlJ" id="jGK-73-ytD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tZQ-2X-V1A" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3629,6 +3632,7 @@ https://calendly.com/creatingencores/free-10-minute-power-coaching-session-with-
                         <outlet property="DateLabel" destination="8zi-oj-XkW" id="vCA-Om-CiT"/>
                         <outlet property="Mastermind" destination="U5j-XW-Rew" id="rRx-J7-axi"/>
                         <outlet property="ProjectGoal" destination="33x-tP-cGG" id="hvG-mh-Lkx"/>
+                        <outlet property="ProjectGoalLabel" destination="Yv6-Vj-eH8" id="FUv-n5-LLc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wxC-Hy-NWT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3828,6 +3832,7 @@ https://calendly.com/creatingencores/free-10-minute-power-coaching-session-with-
                         <outlet property="DateLabel" destination="LMY-fe-2Cr" id="gO1-D1-f3b"/>
                         <outlet property="Mastermind" destination="2jc-Uy-4U6" id="t2b-9R-BDR"/>
                         <outlet property="ProjectGoal" destination="K8D-eO-NXr" id="zj1-OQ-0Ko"/>
+                        <outlet property="ProjectGoalLabel" destination="KNw-tS-4FZ" id="A79-se-ObR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DrF-c6-hzE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -4027,6 +4032,7 @@ https://calendly.com/creatingencores/free-10-minute-power-coaching-session-with-
                         <outlet property="DateLabel" destination="AG2-Wg-axZ" id="pE2-0Q-rTy"/>
                         <outlet property="Mastermind" destination="Q7U-Va-iBy" id="Gkw-Fg-PRK"/>
                         <outlet property="ProjectGoal" destination="Ur5-73-Mil" id="8KY-uv-9xJ"/>
+                        <outlet property="ProjectGoalLabel" destination="jua-gm-Kfr" id="iN7-Pf-xuX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PPQ-2k-qNU" userLabel="First Responder" sceneMemberID="firstResponder"/>

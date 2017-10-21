@@ -82,6 +82,34 @@ class APSummaryViewController: UIViewController {
     }
 
     
+    @IBAction func APDone(_ sender: UIButton) {
+        deletePrevious()
+    }
+    
+    func deletePrevious(){
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        let context = appDelegate.persistentContainer.viewContext
+        
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "APProject")
+        request.returnsObjectsAsFaults = false
+        do
+        {
+            //Delete previous data
+            let results = try context.fetch(request)
+            
+            if results.count > 0{
+                for result in results as! [NSManagedObject]{
+                    context.delete(result)
+                }
+            }
+            try context.save()
+        }
+        catch
+        {
+            //PROCESS ERROR
+        }
+    }
     
     
     
