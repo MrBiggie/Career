@@ -14,6 +14,7 @@
 		573352A01F8277B300F23E26 /* wlbintroduction.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 5733529E1F8277B300F23E26 /* wlbintroduction.m4a */; };
 		5734C2761F78AD240016BB26 /* UVMSelectPictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5734C2751F78AD240016BB26 /* UVMSelectPictureViewController.swift */; };
 		5734C2781F78B3A90016BB26 /* UVMPicturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5734C2771F78B3A90016BB26 /* UVMPicturesViewController.swift */; };
+		574481891FBEE26800CF793C /* icon 76x76.png in Resources */ = {isa = PBXBuildFile; fileRef = 574481881FBEE26800CF793C /* icon 76x76.png */; };
 		576722011F615DA100799242 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 576721FF1F615DA100799242 /* AVFoundation.framework */; };
 		576722021F615DA100799242 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 576722001F615DA100799242 /* AVKit.framework */; };
 		576722041F615E4800799242 /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576722031F615E4800799242 /* IntroductionViewController.swift */; };
@@ -88,6 +89,7 @@
 		5733529E1F8277B300F23E26 /* wlbintroduction.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = wlbintroduction.m4a; sourceTree = "<group>"; };
 		5734C2751F78AD240016BB26 /* UVMSelectPictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UVMSelectPictureViewController.swift; sourceTree = "<group>"; };
 		5734C2771F78B3A90016BB26 /* UVMPicturesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UVMPicturesViewController.swift; sourceTree = "<group>"; };
+		574481881FBEE26800CF793C /* icon 76x76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon 76x76.png"; sourceTree = "<group>"; };
 		576721FF1F615DA100799242 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		576722001F615DA100799242 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		576722031F615E4800799242 /* IntroductionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 				57EEEDDF1F934BE90074D4DA /* icon 40x40.png */,
 				57EEEDDC1F934BE70074D4DA /* icon 58x58.png */,
 				57EEEDE01F934BEA0074D4DA /* icon 60x60.png */,
+				574481881FBEE26800CF793C /* icon 76x76.png */,
 				57EEEDDB1F934BE70074D4DA /* icon 80x80.png */,
 				57EEEDDE1F934BE90074D4DA /* icon 87x87.png */,
 				57EEEDDA1F934BE60074D4DA /* icon 120x120.png */,
@@ -401,6 +404,7 @@
 				57A375F31F934667000CA8FE /* icon 1024x1024.png in Resources */,
 				57EEEDE31F934BEC0074D4DA /* icon 80x80.png in Resources */,
 				57EEEDE21F934BEC0074D4DA /* icon 120x120.png in Resources */,
+				574481891FBEE26800CF793C /* icon 76x76.png in Resources */,
 				576B16171F8E5180001F56EF /* uvmintroduction.m4a in Resources */,
 				57EEEDE71F934BEC0074D4DA /* icon 40x40.png in Resources */,
 				577754BE1F9308E700B5E46C /* relaxation.m4a in Resources */,
