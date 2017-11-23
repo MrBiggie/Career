@@ -20,7 +20,7 @@ class WLBWheelViewController: UIViewController, UITableViewDelegate,PieChartDele
     var health:Double = 5
     var friends:Double = 5
     
-    let chartView: PieChart = PieChart(frame: CGRect(x: 0, y: UIScreen.main.bounds.height/4, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width))
+    let chartView: PieChart = PieChart(frame: CGRect(x: 0, y: UIScreen.main.bounds.height/3, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width/1.5))
     
     override func viewDidLoad() {
         super.viewDidLoad()
