@@ -58,6 +58,14 @@ class APProjectViewController: UIViewController {
     
     @IBAction func SelectDate(_ sender: UIButton) {
         let alertController:UIAlertController=UIAlertController(title: "\n\n\n\n\n\n\n\n\n\n\n\n", message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
+        //initiate popover
+        var popover = alertController.popoverPresentationController
+        if (popover != nil){
+            popover?.sourceView = sender
+            popover?.sourceRect = sender.bounds
+            popover?.permittedArrowDirections = UIPopoverArrowDirection.any
+        }
+        
         // initiate datePicker
         let datePicker = UIDatePicker( )
         // Set language
@@ -97,7 +105,7 @@ class APProjectViewController: UIViewController {
     
     
     @IBAction func AP23SaveButton(_ sender: UIButton) {
-        // InsertAndSave()
+        updateValue()
     }
     
     func InsertAndSave(){

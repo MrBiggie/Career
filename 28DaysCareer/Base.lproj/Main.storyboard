@@ -3006,7 +3006,7 @@ https://calendly.com/creatingencores/free-10-minute-power-coaching-session-with-
                                 <rect key="frame" x="73" y="263" width="174.5" height="80"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lF9-9i-lkF">
-                                        <rect key="frame" x="72" y="0.0" width="30" height="30"/>
+                                        <rect key="frame" x="72.5" y="0.0" width="30" height="30"/>
                                         <state key="normal" title="⏯"/>
                                         <connections>
                                             <action selector="AudioPlayButton:" destination="Bsz-cM-cOX" eventType="touchUpInside" id="bJ2-BH-aok"/>
